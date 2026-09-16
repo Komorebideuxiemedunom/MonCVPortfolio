@@ -22,11 +22,20 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <!-- Anti-FOUC: apply saved theme before first paint -->
-  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));</script>
+  <!-- Neonikala visual overrides — couleurs neon, glass, curseur, effets -->
+  <link href="assets/css/neo-overrides.css" rel="stylesheet">
+
+  <!-- Anti-FOUC: dark par défaut (DA neonikala) -->
+  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'dark');</script>
 </head>
 
 <body class="index-page">
+
+  <!-- Neo cursor elements -->
+  <div id="neo-cursor"></div>
+  <div id="neo-cursor-ring"></div>
+  <!-- WebGL fluid trail canvas -->
+  <canvas id="fluid-canvas"></canvas>
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -88,9 +97,9 @@
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>DANSAC Lucas</h2>
-        <p><span data-i18n="hero.subtitle">Je suis </span><span id="dynamic-role"></span></p>
-        <span class="status-badge" data-aos="fade-up" data-aos-delay="250">
+        <h2 class="gooey-reveal">DANSAC Lucas</h2>
+        <p class="gooey-reveal"><span data-i18n="hero.subtitle">Je suis </span><span id="dynamic-role"></span></p>
+        <span class="status-badge gooey-reveal" data-aos="fade-up" data-aos-delay="250">
           <span class="status-badge-dot"></span>
           <span data-i18n="about.badge">Ouvert aux opportunités</span>
         </span>
@@ -103,8 +112,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 data-i18n="about.title">A Propos</h2>
-        <p data-i18n="about.subtitle">Master en Management de la Création Numérique · Plus de 4 ans d'expérience en gestion de projet, design et communication digitale.</p>
+        <h2 class="gooey-reveal" data-i18n="about.title">A Propos</h2>
+        <p class="gooey-reveal" data-i18n="about.subtitle">Master en Management de la Création Numérique · Plus de 4 ans d'expérience en gestion de projet, design et communication digitale.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -149,8 +158,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 data-i18n="skills.title">Compétences</h2>
-        <p data-i18n="skills.subtitle">Outils métiers solides (Adobe Suite, Agile, Unity) associés à une réelle aptitude créative et une forte capacité d'adaptation.</p>
+        <h2 class="gooey-reveal" data-i18n="skills.title">Compétences</h2>
+        <p class="gooey-reveal" data-i18n="skills.subtitle">Outils métiers solides (Adobe Suite, Agile, Unity) associés à une réelle aptitude créative et une forte capacité d'adaptation.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -260,8 +269,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 data-i18n="services.title">Ce que j'apporte</h2>
-        <p data-i18n="services.subtitle">Un profil pluridisciplinaire qui combine gestion de projet, création visuelle, communication digitale et développement web.</p>
+        <h2 class="gooey-reveal" data-i18n="services.title">Ce que j'apporte</h2>
+        <p class="gooey-reveal" data-i18n="services.subtitle">Un profil pluridisciplinaire qui combine gestion de projet, création visuelle, communication digitale et développement web.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -339,8 +348,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 data-i18n="resume.title">Curriculum Vitae</h2>
-        <p data-i18n="resume.subtitle">Mon parcours académique et professionnel.</p>
+        <h2 class="gooey-reveal" data-i18n="resume.title">Curriculum Vitae</h2>
+        <p class="gooey-reveal" data-i18n="resume.subtitle">Mon parcours académique et professionnel.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -517,8 +526,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 data-i18n="passions.title">Passions</h2>
-        <p data-i18n="passions.subtitle">Ce qui me passionne en dehors du travail.</p>
+        <h2 class="gooey-reveal" data-i18n="passions.title">Passions</h2>
+        <p class="gooey-reveal" data-i18n="passions.subtitle">Ce qui me passionne en dehors du travail.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -566,8 +575,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 data-i18n="portfolio.title">Portfolio</h2>
-        <p data-i18n="portfolio.subtitle">Découvrez mes projets créatifs et numériques.</p>
+        <h2 class="gooey-reveal" data-i18n="portfolio.title">Portfolio</h2>
+        <p class="gooey-reveal" data-i18n="portfolio.subtitle">Découvrez mes projets créatifs et numériques.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -667,8 +676,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 data-i18n="contact.title">Me contacter</h2>
-        <p data-i18n="contact.subtitle">N'hésitez pas à me contacter pour toute opportunité professionnelle.</p>
+        <h2 class="gooey-reveal" data-i18n="contact.title">Me contacter</h2>
+        <p class="gooey-reveal" data-i18n="contact.subtitle">N'hésitez pas à me contacter pour toute opportunité professionnelle.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -781,6 +790,8 @@
   <script src="assets/js/i18n.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Neonikala effects: cursor, WebGL trail, gooey reveal -->
+  <script src="assets/js/neo-effects.js"></script>
 
 </body>
 
