@@ -554,8 +554,7 @@ section,
   font-weight: 700;
   margin-top: 20px; margin-bottom: 28px;
   color: var(--accent-color);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: .2px;
   display: flex; align-items: center; gap: 10px;
 }
 .resume .resume-title::before {
@@ -681,7 +680,7 @@ section,
 .portfolio .portfolio-content .portfolio-info h4 {
   font-size: 10px; font-weight: 700;
   color: rgba(255,255,255,.6);
-  text-transform: uppercase; letter-spacing: 2px;
+  letter-spacing: .2px;
   margin: 0; display: block;
   position: absolute; top: 14px; left: 16px;
 }
@@ -737,7 +736,7 @@ section,
 }
 .contact .info-item h3 {
   font-size: 12px; font-weight: 700; margin-bottom: 4px;
-  text-transform: uppercase; letter-spacing: 1px; color: var(--heading-color);
+  letter-spacing: .2px; color: var(--heading-color);
 }
 .contact .info-item p,
 .contact .info-item p a {
@@ -754,7 +753,7 @@ section,
 }
 .contact form label {
   font-size: 12px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .5px;
+  letter-spacing: .1px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 .contact form input[type=text],
@@ -799,8 +798,8 @@ section,
   margin-bottom: 14px;
 }
 .project-header .badge-category {
-  font-size: 11px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 1.5px; color: var(--accent-color);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .2px; color: var(--accent-color);
   background: color-mix(in srgb, var(--accent-color), transparent 88%);
   padding: 4px 14px; border-radius: 30px;
 }
@@ -886,8 +885,8 @@ section,
   margin-bottom: 20px;
 }
 .portfolio-details .info-card h3 {
-  font-size: 11px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 2px; color: var(--accent-color);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .2px; color: var(--accent-color);
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -899,8 +898,8 @@ section,
 }
 .portfolio-details .info-card .info-row:last-child { border-bottom: none; }
 .portfolio-details .info-card .info-key {
-  font-size: 11px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: .8px;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .1px;
   color: color-mix(in srgb, var(--default-color), transparent 45%);
   margin-bottom: 2px;
 }
@@ -972,8 +971,8 @@ section,
   box-shadow: 0 4px 20px rgba(79,70,229,.08);
 }
 .portfolio-details .contribution-card .card-role {
-  font-size: 11px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 1.5px; color: var(--accent-color);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .2px; color: var(--accent-color);
   margin-bottom: 8px; display: block;
 }
 .portfolio-details .contribution-card p {
@@ -1004,8 +1003,8 @@ section,
 /* Figma embeds */
 .figma-embed-wrapper { margin: 20px 0; }
 .figma-embed-wrapper .embed-label {
-  font-size: 11px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 1.5px;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .2px;
   color: color-mix(in srgb, var(--default-color), transparent 42%);
   margin-bottom: 8px;
 }

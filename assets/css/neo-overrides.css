@@ -597,8 +597,7 @@ body {
 }
 .figma-embed-wrapper .embed-label {
   font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: .2px;
   color: var(--neo-blue);
   margin: 0;
   padding: 10px 14px;
@@ -646,22 +645,8 @@ footer {
 }
 
 /* ============================================================
-   FIL D'ARIANE — section numbering + reading progress
+   FIL D'ARIANE — reading progress
 ============================================================ */
-.main { counter-reset: section-counter; }
-.section-title { counter-increment: section-counter; }
-.section-title h2::before {
-  content: "0" counter(section-counter) " ·";
-  display: block;
-  font-size: 10px;
-  letter-spacing: 3.5px;
-  color: var(--neo-blue);
-  opacity: 0.55;
-  margin-bottom: 8px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: 'Roboto Mono', 'Courier New', monospace;
-}
 
 #reading-progress {
   position: fixed;
