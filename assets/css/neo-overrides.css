@@ -76,6 +76,12 @@ body {
   * { cursor: none !important; }
 }
 
+/* Curseur neon + trail fluide: hors sujet sur tactile (pas de survol,
+   sinon le point/ring reste figé dans un coin faute de mousemove) */
+@media (hover: none), (pointer: coarse) {
+  #neo-cursor, #neo-cursor-ring, #fluid-trail { display: none !important; }
+}
+
 /* ---- Curseur neon — dot */
 #neo-cursor {
   position: fixed;

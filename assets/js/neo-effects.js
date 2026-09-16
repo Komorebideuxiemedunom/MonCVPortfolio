@@ -5,7 +5,12 @@
 (function () {
   'use strict';
 
-  var isTouchDevice = function () { return window.matchMedia('(hover: none)').matches; };
+  var isTouchDevice = function () {
+    return window.matchMedia('(hover: none)').matches ||
+      window.matchMedia('(pointer: coarse)').matches ||
+      ('ontouchstart' in window) ||
+      (navigator.maxTouchPoints > 0);
+  };
   var prefersReduced = function () { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; };
 
   /* ====================================================

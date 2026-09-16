@@ -3,8 +3,13 @@
 (function () {
   "use strict";
 
+  var isTouchDevice = window.matchMedia("(pointer: coarse)").matches ||
+    window.matchMedia("(hover: none)").matches ||
+    ("ontouchstart" in window) ||
+    (navigator.maxTouchPoints > 0);
+
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  if (window.matchMedia("(pointer: coarse)").matches) return;
+  if (isTouchDevice) return;
 
   const DEFAULTS = {
     simResolution:       96,
