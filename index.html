@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -34,8 +34,6 @@
   <!-- Neo cursor elements -->
   <div id="neo-cursor"></div>
   <div id="neo-cursor-ring"></div>
-  <!-- WebGL fluid trail canvas -->
-  <canvas id="fluid-canvas"></canvas>
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -73,6 +71,11 @@
         </li>
       </ul>
     </nav>
+
+    <!-- Flèche scroll — accessibilité visuelle -->
+    <div class="header-scroll-hint" aria-hidden="true">
+      <i class="bi bi-chevron-double-down"></i>
+    </div>
 
   </header>
 
@@ -152,117 +155,6 @@
       </div>
 
     </section><!-- /About Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="gooey-reveal" data-i18n="skills.title">Compétences</h2>
-        <p class="gooey-reveal" data-i18n="skills.subtitle">Outils métiers solides (Adobe Suite, Agile, Unity) associés à une réelle aptitude créative et une forte capacité d'adaptation.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Adobe Suite (Photoshop, Illustrator, InDesign, Adobe XD, After Effects)</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span data-i18n="skills.mgmt">Outils de gestion (Trello, Monday, Hacknplan)</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Unity</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Blender (Animation 3D)</span> <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span data-i18n="skills.veille">Veille informatique</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Git</span> <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Office &amp; Google Workspace</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span data-i18n="skills.methods">Méthodes Agile (Scrum, Kanban)</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>HTML/CSS &amp; Intégration web</span> <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>E-mailing</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Multi-cible (B2B/B2C)</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span data-i18n="skills.creation">Création 2D/3D</span> <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -521,54 +413,116 @@
 
     </section><!-- /Resume Section -->
 
-    <!-- Passions Section -->
-    <section id="passions" class="services section passions-section">
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 class="gooey-reveal" data-i18n="passions.title">Passions</h2>
-        <p class="gooey-reveal" data-i18n="passions.subtitle">Ce qui me passionne en dehors du travail.</p>
+        <h2 class="gooey-reveal" data-i18n="skills.title">Compétences</h2>
+        <p class="gooey-reveal" data-i18n="skills.subtitle">Outils métiers solides (Adobe Suite, Agile, Unity) associés à une réelle aptitude créative et une forte capacité d'adaptation.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4">
+        <div class="row skills-content skills-animation">
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-controller"></i></div>
-              <div>
-                <h4 class="title" data-i18n="passions.games.title">Jeux vidéos</h4>
-                <p class="description">Chef d'une guilde de 34 personnes sur World of Warcraft pendant 3 ans. Top 3 mondial monk tank (2023). Top 0.2% joueurs européens sur Valorant. Top 3% joueurs européens sur CS2.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
+          <div class="col-lg-6">
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-tv"></i></div>
-              <div>
-                <h4 class="title" data-i18n="passions.series.title">Séries et films</h4>
-                <p class="description">Passionné par l'animation 2D/3D, avec plus de 500 séries terminées.</p>
+            <div class="progress">
+              <span class="skill"><span>Adobe Suite (Photoshop, Illustrator, InDesign, Adobe XD, After Effects)</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div>
-          </div><!-- End Service Item -->
+            </div><!-- End Skills Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-book"></i></div>
-              <div>
-                <h4 class="title" data-i18n="passions.read.title">Lecture</h4>
-                <p class="description">Philosophie (Hermann Hesse), romans dystopiques et psychologiques, manga et manhwa.</p>
+            <div class="progress">
+              <span class="skill"><span data-i18n="skills.mgmt">Outils de gestion (Trello, Monday, Hacknplan)</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div>
-          </div><!-- End Service Item -->
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Unity</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Blender (Animation 3D)</span> <i class="val">65%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span data-i18n="skills.veille">Veille informatique</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Git</span> <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Office &amp; Google Workspace</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span data-i18n="skills.methods">Méthodes Agile (Scrum, Kanban)</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>HTML/CSS &amp; Intégration web</span> <i class="val">65%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>E-mailing</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Multi-cible (B2B/B2C)</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span data-i18n="skills.creation">Création 2D/3D</span> <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Passions Section -->
+    </section><!-- /Skills Section -->
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section light-background">
@@ -670,6 +624,55 @@
       </div>
 
     </section><!-- /Portfolio Section -->
+
+    <!-- Passions Section -->
+    <section id="passions" class="services section passions-section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="gooey-reveal" data-i18n="passions.title">Passions</h2>
+        <p class="gooey-reveal" data-i18n="passions.subtitle">Ce qui me passionne en dehors du travail.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-controller"></i></div>
+              <div>
+                <h4 class="title" data-i18n="passions.games.title">Jeux vidéos</h4>
+                <p class="description">Chef d'une guilde de 34 personnes sur World of Warcraft pendant 3 ans. Top 3 mondial monk tank (2023). Top 0.2% joueurs européens sur Valorant. Top 3% joueurs européens sur CS2.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-tv"></i></div>
+              <div>
+                <h4 class="title" data-i18n="passions.series.title">Séries et films</h4>
+                <p class="description">Passionné par l'animation 2D/3D, avec plus de 500 séries terminées.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-book"></i></div>
+              <div>
+                <h4 class="title" data-i18n="passions.read.title">Lecture</h4>
+                <p class="description">Philosophie (Hermann Hesse), romans dystopiques et psychologiques, manga et manhwa.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Passions Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -790,8 +793,10 @@
   <script src="assets/js/i18n.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <!-- Neonikala effects: cursor, WebGL trail, gooey reveal -->
+  <!-- Neonikala effects: cursor, gooey reveal, reading progress -->
   <script src="assets/js/neo-effects.js"></script>
+  <!-- WebGL Navier-Stokes fluid trail (neon) -->
+  <script src="assets/js/fluid-trail.js"></script>
 
 </body>
 
