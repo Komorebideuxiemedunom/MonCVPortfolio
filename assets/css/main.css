@@ -1177,3 +1177,154 @@ li.nav-theme-sep {
   outline-offset: 3px;
   border-radius: 3px;
 }
+
+/*--------------------------------------------------------------
+# Neon accents
+# Inspiration : neonikala.com (immersive neon exhibition site) —
+# on en reprend la technique (halo au drop-shadow superposé,
+# verre depoli, contraste de graisse fort) sans en reprendre le
+# code ni la palette rave : tout reste dans l'indigo du site.
+--------------------------------------------------------------*/
+:root {
+  --glow-color:    rgba(129,140,248,.65);
+  --glow-color-2:  rgba(199,210,254,.9);
+  --glow-ok:       #34d399;
+  --glow-ok-soft:  rgba(52,211,153,.55);
+}
+[data-theme="dark"] {
+  --glow-color:   rgba(165,180,252,.75);
+  --glow-color-2: rgba(224,231,255,.95);
+}
+
+/* -- Badge "ouvert aux opportunités" (hero) ------------------- */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 26px;
+  padding: 9px 20px 9px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .3px;
+  color: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.16);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.12),
+    0 8px 24px rgba(0,0,0,.28);
+}
+.status-badge-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--glow-ok);
+  flex-shrink: 0;
+  box-shadow:
+    0 0 0 3px var(--glow-ok-soft),
+    0 0 6px 1px var(--glow-ok),
+    0 0 16px 4px var(--glow-ok-soft);
+  animation: statusPulse 2.4s ease-in-out infinite;
+}
+@keyframes statusPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 3px var(--glow-ok-soft),
+      0 0 6px 1px var(--glow-ok),
+      0 0 16px 4px var(--glow-ok-soft);
+  }
+  50% {
+    box-shadow:
+      0 0 0 5px transparent,
+      0 0 10px 2px var(--glow-ok),
+      0 0 26px 8px var(--glow-ok-soft);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .status-badge-dot { animation: none; }
+}
+@media (max-width:480px) {
+  .status-badge { font-size: 12px; padding: 8px 16px 8px 14px; }
+}
+
+/* -- CTA "Telecharger mon CV" : halo + effet de balayage lumineux */
+.btn-cv {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-cv::before {
+  content: "";
+  position: absolute;
+  inset: -40% -60%;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(255,255,255,.35) 46%,
+    rgba(255,255,255,.55) 50%,
+    rgba(255,255,255,.35) 54%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform .7s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+.btn-cv:hover::before { transform: translateX(20%); }
+.btn-cv:hover {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--accent-light), transparent 40%),
+    0 0 18px 2px var(--glow-color),
+    0 10px 30px rgba(79,70,229,.38);
+}
+
+/* -- Photo de profil : halo neon au survol, comme le logo de reference -- */
+.header .profile-img { position: relative; }
+.header .profile-img::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  background: radial-gradient(circle, var(--glow-color) 0%, transparent 72%);
+  filter: blur(14px);
+  transition: opacity .4s ease;
+}
+.header .profile-img:hover::before { opacity: 1; }
+
+/* -- Nav : texte lumineux au survol / actif -------------------- */
+.navmenu a:hover span,
+.navmenu .active span {
+  text-shadow: 0 0 12px var(--glow-color);
+}
+
+/* -- Titres de section : trait lumineux --------------------- */
+.section-title h2::after {
+  box-shadow: 0 0 10px 1px var(--glow-color);
+}
+
+/* -- Frise du CV : le point de chaque poste respire doucement -- */
+.resume .resume-item::before {
+  box-shadow: 0 0 0 0 var(--glow-color);
+  animation: resumeDotGlow 3.2s ease-in-out infinite;
+}
+.resume .resume-item:first-child::before {
+  animation-delay: 0s;
+}
+@keyframes resumeDotGlow {
+  0%, 100% { box-shadow: 0 0 0 0 transparent; }
+  50%      { box-shadow: 0 0 10px 2px var(--glow-color); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .resume .resume-item::before { animation: none; }
+}
+
+/* -- Cartes portfolio : liseré lumineux au survol ------------- */
+.portfolio .portfolio-content:hover {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--accent-light), transparent 55%),
+    0 0 24px 2px color-mix(in srgb, var(--glow-color), transparent 35%),
+    0 16px 40px rgba(79,70,229,.16);
+}
