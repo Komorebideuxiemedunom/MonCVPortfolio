@@ -244,32 +244,48 @@ body {
 .hero p { color: rgba(255,255,255,.65) !important; }
 .hero p span { border-bottom-color: rgba(88,180,255,.35) !important; }
 
-/* Status badge — style neonikala : bord net, pas de flou */
+/* Status badge — étiquette de signal, pas une pilule glassy générique */
 .status-badge {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   margin-top: 26px;
-  padding: 9px 22px 9px 18px;
-  border-radius: 50px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.88) !important;
-  background: rgba(88,235,200,.06) !important;
-  border: 1px solid rgba(88,235,200,.38) !important;
+  padding: 10px 22px 10px 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: var(--nav-font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .1px;
+  text-transform: none;
+  color: rgba(255,255,255,.9) !important;
+  background: rgba(10,12,22,.7) !important;
+  border: 1px solid rgba(88,235,200,.35) !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  box-shadow: 0 0 18px rgba(88,235,200,.1) !important;
+  box-shadow: none !important;
+}
+.status-badge::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--neo-mint), var(--neo-blue));
 }
 .status-badge-dot {
-  width: 8px; height: 8px;
+  width: 7px; height: 7px;
   background: var(--neo-mint) !important;
-  box-shadow:
-    0 0 0 3px rgba(88,235,200,.28),
-    0 0 8px 1px var(--neo-mint),
-    0 0 16px 3px rgba(88,235,200,.35) !important;
+  box-shadow: 0 0 6px 1px rgba(88,235,200,.55) !important;
+  flex-shrink: 0;
+  animation: statusBlink 2.6s ease-in-out infinite;
+}
+@keyframes statusBlink {
+  0%, 76%, 100% { opacity: 1; }
+  88% { opacity: .3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .status-badge-dot { animation: none; }
 }
 
 /* ============================================================
