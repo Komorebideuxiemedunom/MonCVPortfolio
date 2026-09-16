@@ -399,7 +399,7 @@ body {
   background: rgba(4,4,12,.88) !important;
   border: 1px solid var(--border);
 }
-.portfolio .portfolio-content img { background: rgba(4,4,12,.55) !important; }
+.portfolio .portfolio-content img { background: #f0f0f7 !important; }
 .portfolio .portfolio-content:hover {
   border-color: rgba(88,180,255,.26) !important;
   box-shadow: 0 0 0 1px rgba(88,180,255,.16), 0 0 28px rgba(88,180,255,.18), 0 18px 48px rgba(0,0,0,.6) !important;
