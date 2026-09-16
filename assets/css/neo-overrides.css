@@ -119,6 +119,12 @@ body {
   border-color: rgba(184,122,255,.35);
 }
 
+/* ---- GLightbox: fond neutre clair derrière les images transparentes
+   (logos/mockups en noir sur transparent, invisibles sur fond sombre) ---- */
+.gslide-image {
+  background: #f0f0f7;
+}
+
 /* ---- Preloader */
 #preloader { background: #06060F; }
 #preloader:before {

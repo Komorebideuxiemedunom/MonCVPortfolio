@@ -835,7 +835,7 @@ section,
   height: 420px;
   object-fit: contain;
   object-position: center center;
-  background: var(--surface-color);
+  background: #f0f0f7;
   display: block;
 }
 @media (max-width:992px) {
