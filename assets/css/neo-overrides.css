@@ -181,10 +181,6 @@ body {
   box-shadow: 0 0 12px rgba(88,180,255,.28) !important;
 }
 
-/* Toggle */
-#theme-toggle:checked ~ .toggle-track {
-  background: linear-gradient(135deg, var(--neo-blue), var(--neo-violet)) !important;
-}
 .lang-opt.active {
   background: rgba(88,180,255,.16) !important;
   color: var(--neo-blue) !important;

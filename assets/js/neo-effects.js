@@ -56,7 +56,7 @@
     }
 
     function bindHoverTargets() {
-      var sel = 'a, button, .portfolio-filters li, .service-item, .portfolio-content, .lang-opt, .toggle-switch, .scroll-top, .btn-cv, .btn-project-link, .back-to-portfolio';
+      var sel = 'a, button, .portfolio-filters li, .service-item, .portfolio-content, .lang-opt, .scroll-top, .btn-cv, .btn-project-link, .back-to-portfolio';
       document.querySelectorAll(sel).forEach(function (el) {
         el.addEventListener('mouseenter', onEnter);
         el.addEventListener('mouseleave', onLeave);

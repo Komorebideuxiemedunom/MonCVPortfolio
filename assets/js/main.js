@@ -10,19 +10,6 @@
   "use strict";
 
   /**
-   * Theme toggle (dark / light mode) — iOS checkbox switch
-   */
-  var themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    themeToggle.checked = (document.documentElement.getAttribute('data-theme') || 'light') === 'dark';
-    themeToggle.addEventListener('change', function() {
-      var next = this.checked ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
-  }
-
-  /**
    * Header toggle
    */
   const headerToggleBtn = document.querySelector('.header-toggle');
