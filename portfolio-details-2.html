@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -19,13 +19,12 @@
   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/neo-overrides.css" rel="stylesheet">
-  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'dark')').matches?'dark':'light'));</script>
+  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'dark');</script>
 </head>
 
 <body class="portfolio-details-page">
   <div id="neo-cursor"></div>
   <div id="neo-cursor-ring"></div>
-  <canvas id="fluid-canvas"></canvas>
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -59,6 +58,12 @@
         </li>
       </ul>
     </nav>
+
+    <!-- Flèche scroll — accessibilité visuelle -->
+    <div class="header-scroll-hint" aria-hidden="true">
+      <i class="bi bi-chevron-double-down"></i>
+    </div>
+
   </header>
 
   <main class="main">
@@ -231,6 +236,8 @@
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/neo-effects.js"></script>
+  <!-- WebGL Navier-Stokes fluid trail (neon) -->
+  <script src="assets/js/fluid-trail.js"></script>
 </body>
 </html>
 
