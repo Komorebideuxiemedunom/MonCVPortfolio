@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   margin-bottom: 15px;
 }
-.header .logo h1 {
+.header .logo .sitename {
   font-size: 24px;
   margin: 0;
   font-weight: 700;
@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--background-color);
   padding: 25px 0;
 }
-.page-title h1 { font-size: 24px; font-weight: 700; }
+.page-title h2 { font-size: 24px; font-weight: 700; }
 .page-title .breadcrumbs ol {
   display: flex; flex-wrap: wrap;
   list-style: none; padding: 0; margin: 0; font-size: 14px;
@@ -357,7 +357,7 @@ section,
   text-align: center;
 }
 
-.hero h2 {
+.hero h1 {
   margin: 0;
   font-size: 64px;
   font-weight: 800;
@@ -393,11 +393,11 @@ section,
 }
 
 @media (max-width:768px) {
-  .hero h2 { font-size: 36px; letter-spacing: 2px; }
+  .hero h1 { font-size: 36px; letter-spacing: 2px; }
   .hero p  { font-size: 17px; }
 }
 @media (max-width:480px) {
-  .hero h2 { font-size: 26px; }
+  .hero h1 { font-size: 26px; }
   .hero p  { font-size: 15px; }
 }
 

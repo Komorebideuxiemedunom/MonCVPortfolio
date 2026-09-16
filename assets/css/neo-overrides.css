@@ -152,7 +152,7 @@ body {
 }
 
 /* Logo — dégradé de signal */
-.header .logo h1 {
+.header .logo .sitename {
   font-size: 14px;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -231,7 +231,7 @@ body {
 .circles li:nth-child(3n+2) { background: rgba(88,235,200,.035) !important; border-color: rgba(88,235,200,.07) !important; }
 
 /* Hero H2 — dégradé bleu→violet */
-.hero h2 {
+.hero h1 {
   background: linear-gradient(135deg, #fff 0%, var(--neo-blue) 55%, var(--neo-violet) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -652,12 +652,26 @@ footer {
   top: 0;
   left: 0;
   height: 2px;
-  width: 0%;
+  width: var(--progress, 0%);
   background: linear-gradient(90deg, var(--neo-blue) 0%, var(--neo-violet) 55%, var(--neo-mint) 100%);
   box-shadow: 0 0 8px 1px rgba(88,180,255,.55);
   z-index: 10000;
   transition: width .12s linear;
   pointer-events: none;
+}
+
+/* Mobile: barre verticale sur le bord gauche — une barre horizontale
+   en haut traverse le texte des sections qui touchent le haut de l'écran */
+@media (max-width: 1199px) {
+  #reading-progress {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: var(--progress, 0%);
+    width: 3px;
+    background: linear-gradient(180deg, var(--neo-blue) 0%, var(--neo-violet) 55%, var(--neo-mint) 100%);
+    transition: height .12s linear;
+  }
 }
 
 /* ============================================================

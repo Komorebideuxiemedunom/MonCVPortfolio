@@ -116,7 +116,7 @@
       var scrollTop = window.scrollY || document.documentElement.scrollTop;
       var docH = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       var pct = docH > 0 ? (scrollTop / docH) * 100 : 0;
-      bar.style.width = pct + '%';
+      bar.style.setProperty('--progress', pct + '%');
     }, { passive: true });
   }
 
