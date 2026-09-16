@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Lucas DANSAC — PM &amp; Designer Numérique</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Anti-FOUC: apply saved theme before first paint -->
+  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));</script>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">DANSAC Lucas</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://www.linkedin.com/in/lucas-dansac/" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html" class="active"><i class="bi bi-person navicon"></i><span data-i18n="nav.about">A propos</span></a></li>
+        <li><a href="index.html"><i class="bi bi-file-earmark-text navicon"></i><span data-i18n="nav.resume">Curriculum Vitae</span></a></li>
+        <li><a href="index.html"><i class="bi bi-images navicon"></i><span data-i18n="nav.portfolio">Portfolio</span></a></li>
+        <li><a href="index.html"><i class="bi bi-envelope navicon"></i><span data-i18n="nav.contact">Contact</span></a></li>
+        <li class="nav-theme-sep"></li>
+        <li class="nav-controls-row">
+          <label class="toggle-switch" aria-label="Basculer mode nuit/jour">
+            <i class="bi bi-sun-fill toggle-sun"></i>
+            <input type="checkbox" id="theme-toggle" role="switch">
+            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            <i class="bi bi-moon-stars-fill toggle-moon"></i>
+          </label>
+          <div class="lang-switch">
+            <button class="lang-opt active" data-lang="fr">FR</button>
+            <button class="lang-opt" data-lang="en">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>DANSAC Lucas</h2>
+        <p><span data-i18n="hero.subtitle">Je suis </span><span id="dynamic-role"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="about.title">A Propos</h2>
+        <p data-i18n="about.subtitle">Master en Management de la Création Numérique · Plus de 4 ans d'expérience en gestion de projet, design et communication digitale.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="Photo de profil de DANSAC Lucas">
+          </div>
+          <div class="col-lg-8 content">
+            <h2 data-i18n="about.h2">Chef de Projet &amp; Designer Numérique · Profil créatif &amp; pluridisciplinaire</h2>
+            <p class="fst-italic py-3" data-i18n="about.body1">
+              Diplômé d'un master en management de la création numérique, je pilote des projets de l'idée au livrable en combinant rigueur méthodologique et sensibilité créative. Mon parcours couvre la gestion de projet Agile, le design UX/UI, la communication digitale et la production de jeux vidéo — des compétences appliquées aussi bien en entreprise qu'en production indépendante.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong data-i18n="about.label.birthday">Naissance :</strong> <span>4 juillet 1999</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong data-i18n="about.label.driving">Permis :</strong> <span>B</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong data-i18n="about.label.location">Localisation :</strong> <span>Moselle, France</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong data-i18n="about.label.degree">Diplôme :</strong> <span>Master</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong data-i18n="about.label.avail">Disponibilité :</strong> <span data-i18n="about.val.avail">Immédiate</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3" data-i18n="about.body2">
+              Actuellement Chargé de Communication &amp; Marketing Digital chez Q-Leap S.A (Luxembourg), je suis ouvert à de nouvelles opportunités en gestion de projet, communication ou design dans des environnements créatifs, tech ou gaming.
+            </p>
+            <a href="assets/ATSCV3_DANSACLUCAS.pdf" download class="btn-cv"><i class="bi bi-download"></i> <span data-i18n="about.download">Télécharger mon CV</span></a>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="skills.title">Compétences</h2>
+        <p data-i18n="skills.subtitle">Outils métiers solides (Adobe Suite, Agile, Unity) associés à une réelle aptitude créative et une forte capacité d'adaptation.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Adobe Suite (Photoshop, Illustrator, InDesign, Adobe XD, After Effects)</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span data-i18n="skills.mgmt">Outils de gestion (Trello, Monday, Hacknplan)</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Unity</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Blender (Animation 3D)</span> <i class="val">65%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span data-i18n="skills.veille">Veille informatique</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Git</span> <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Office &amp; Google Workspace</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span data-i18n="skills.methods">Méthodes Agile (Scrum, Kanban)</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>HTML/CSS &amp; Intégration web</span> <i class="val">65%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>E-mailing</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Multi-cible (B2B/B2C)</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span data-i18n="skills.creation">Création 2D/3D</span> <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="services.title">Ce que j'apporte</h2>
+        <p data-i18n="services.subtitle">Un profil pluridisciplinaire qui combine gestion de projet, création visuelle, communication digitale et développement web.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-diagram-3"></i></div>
+              <div>
+                <h4 class="title" data-i18n="services.pm.title">Gestion de Projet Agile</h4>
+                <p class="description" data-i18n="services.pm.desc">Pilotage de projets créatifs et numériques en Agile/Scrum/Waterfall. Backlog, sprints, coordination multi-profils, reporting aux parties prenantes.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-layers"></i></div>
+              <div>
+                <h4 class="title" data-i18n="services.ux.title">UX/UI &amp; Prototypage</h4>
+                <p class="description" data-i18n="services.ux.desc">Conception de wireframes et prototypes interactifs (Figma, Adobe XD). Optimisation des parcours utilisateur, tests QA, documentation fonctionnelle.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-stars"></i></div>
+              <div>
+                <h4 class="title" data-i18n="services.vfx.title">Effets Visuels (VFX)</h4>
+                <p class="description" data-i18n="services.vfx.desc">Création et intégration d'effets visuels sous Unity (Particle System, ShaderGraph). Motion design et post-production pour jeux vidéo et contenus numériques.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-megaphone"></i></div>
+              <div>
+                <h4 class="title" data-i18n="services.com.title">Communication &amp; Contenu</h4>
+                <p class="description" data-i18n="services.com.desc">Community management, copywriting, production vidéo (pub, produits, réseaux). Création de contenus multicanaux B2B et B2C, gestion événementielle.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-palette"></i></div>
+              <div>
+                <h4 class="title" data-i18n="services.design.title">Design Graphique &amp; Identité</h4>
+                <p class="description" data-i18n="services.design.desc">Conception de logos, infographies, assets et chartes graphiques. Maîtrise de la Suite Adobe (Photoshop, Illustrator, InDesign, XD, After Effects).</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-code-slash"></i></div>
+              <div>
+                <h4 class="title" data-i18n="services.web.title">Développement Web</h4>
+                <p class="description" data-i18n="services.web.desc">Intégration HTML/CSS, migration et refonte de sites (Bootstrap, Firebase). Approche orientée accessibilité, performance et expérience utilisateur.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="resume.title">Curriculum Vitae</h2>
+        <p data-i18n="resume.subtitle">Mon parcours académique et professionnel.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title" data-i18n="resume.edu">Formation</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Master Management Jeux Images et Créativités</h4>
+              <h5>2021 – 2023</h5>
+              <p><em>Cannes, Bastide Rouge (Bac+5)</em></p>
+              <ul>
+                <li>Méthodologies Agile, Scrum et Waterfall appliquées en production</li>
+                <li>Production de jeux vidéo (Unity, C#, pipeline artistique)</li>
+                <li>Gestion d'équipe, communication et compétences RH</li>
+                <li>Conception UX/UI et design graphique (Adobe Suite)</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Licence Information-Communication</h4>
+              <h5>2018 – 2021</h5>
+              <p><em>Nancy, Faculté des Lettres et Sciences Humaines (Bac+3)</em></p>
+              <ul>
+                <li>Communication organisationnelle et relations interpersonnelles</li>
+                <li>PAO : flyers, assets 2D, logos, interfaces (Photoshop, Illustrator)</li>
+                <li>Initiation web (HTML/CSS) et veille informatique</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title" data-i18n="resume.exp">Expériences Professionnelles</h3>
+
+            <div class="resume-item">
+              <h4>Chargé de Communication &amp; Marketing Digital</h4>
+              <h5>Juin 2026 - Présent</h5>
+              <p><em>Q-Leap S.A, Luxembourg</em></p>
+              <ul>
+                <li>Coordination de la migration et refonte de 4 sites web (Q-Bot, Q-Guard, Q-Leap, LSTE)</li>
+                <li>Gestion des 2 pages LinkedIn de l'entreprise (publications, planification, analyse des performances)</li>
+                <li>Production de visuels, infographies et chartes graphiques (Suite Adobe)</li>
+                <li>Création de contenus vidéo pour les réseaux sociaux, la publicité et les produits</li>
+                <li>Animation de réunions hebdomadaires, comptes-rendus et documentation Notion</li>
+                <li>Coordination logistique d'événements professionnels (LSTE, team buildings)</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Assistant de Production Audiovisuelle</h4>
+              <h5>2025 (5 mois)</h5>
+              <p><em>Contern, Luxembourg</em></p>
+              <ul>
+                <li>Suivi simultané de multiples projets en environnement de production audiovisuelle</li>
+                <li>Conception et maintenance d'outils de suivi Excel pour le backlog de production</li>
+                <li>Automatisation de traitements de données Excel (VBA / Python)</li>
+                <li>Rédaction de comptes-rendus et coordination communication interne/externe</li>
+                <li>Gestion de bibliothèques de fichiers médias via FTP</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Chef de Projet · Jeu Vidéo Survival Shooter (projet indépendant)</h4>
+              <h5>2023 – Présent</h5>
+              <p><em>Moselle</em></p>
+              <ul>
+                <li>Pilotage Agile d'une équipe de 3 (planification, sprints, rétrospectives)</li>
+                <li>Création et intégration d'effets visuels sous Unity (Particle System, VFX Graph)</li>
+                <li>Animation 3D sous Blender (modélisation, rigging, export)</li>
+                <li>Conception et tenue du backlog · Suivi des livrables</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Stage Project Manager</h4>
+              <h5>2023 (6 mois)</h5>
+              <p><em>Foyer Assurances, Luxembourg</em></p>
+              <ul>
+                <li>Pilotage de projets transversaux en coordination multi-services</li>
+                <li>Refonte UX du parcours utilisateur (audit, wireframes, tests utilisateurs)</li>
+                <li>Maintenance et mise à jour de l'intranet d'entreprise</li>
+                <li>Application des méthodologies Agile et Lean</li>
+                <li>Rédaction de cas de tests et validation QA fonctionnelle</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Chef de Projet · Jeu Vidéo Roguelite</h4>
+              <h5>2022 – 2023 (6 mois)</h5>
+              <p><em>FIJ, Cannes</em></p>
+              <ul>
+                <li>Pilotage hybride Agile / Waterfall sur Microsoft DevOps</li>
+                <li>Coordination d'une équipe de 6 collaborateurs pluridisciplinaires</li>
+                <li>Création et intégration de VFX sous Unity</li>
+                <li>Gestion et priorisation du backlog tout au long du projet</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Chef de Projet · Jeu Sérieux Escape Game</h4>
+              <h5>2022 (3 mois)</h5>
+              <p><em>Cannes — en partenariat avec Scalian</em></p>
+              <ul>
+                <li>Pilotage Agile d'un jeu sérieux en partenariat avec Scalian</li>
+                <li>Coordination d'une équipe pluridisciplinaire de 12 personnes</li>
+                <li>Rédaction du Game Design Document (GDD)</li>
+                <li>Conception et gestion du backlog complet</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Stage Project Manager &amp; UX/UI Designer</h4>
+              <h5>2022 (6 mois)</h5>
+              <p><em>Association Ludhic, Cannes</em></p>
+              <ul>
+                <li>Pilotage Agile d'un projet de refonte web (équipe de 3)</li>
+                <li>Audit UX et refonte complète du parcours utilisateur</li>
+                <li>Mise en place d'un système de catalogage de 100+ jeux étudiants (2015 – présent)</li>
+                <li>Production de wireframes responsive sous Adobe XD</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Chef de Projet · Jeu Vidéo Soulslike</h4>
+              <h5>2021 – 2022 (6 mois)</h5>
+              <p><em>FIJ, Cannes</em></p>
+              <ul>
+                <li>Pilotage Agile de la production (équipe de 6)</li>
+                <li>Création et intégration de VFX sous Unity</li>
+                <li>Conception et tenue du backlog de projet</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Chef de Projet · Application de Visite Ludique du Musée du Parfum</h4>
+              <h5>2021 (5 mois)</h5>
+              <p><em>Grasse</em></p>
+              <ul>
+                <li>Pilotage en cycle en V d'une équipe de 5</li>
+                <li>Rédaction du Game Design Document (GDD)</li>
+                <li>Conception des wireframes et backlog détaillé</li>
+                <li>Présentation officielle du projet au Maire de Grasse</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Stage Project Manager &amp; Chargé de Communication</h4>
+              <h5>2021 (5 mois)</h5>
+              <p><em>SU2IP, Nancy</em></p>
+              <ul>
+                <li>Création et publication de modules de formation e-learning</li>
+                <li>Conception d'une série de jeux éducatifs numériques</li>
+                <li>Veille informatique et benchmark concurrentiel</li>
+                <li>Gestion multi-plateformes (réseaux sociaux, e-mailing, CMS)</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Passions Section -->
+    <section id="passions" class="services section passions-section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="passions.title">Passions</h2>
+        <p data-i18n="passions.subtitle">Ce qui me passionne en dehors du travail.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-controller"></i></div>
+              <div>
+                <h4 class="title" data-i18n="passions.games.title">Jeux vidéos</h4>
+                <p class="description">Chef d'une guilde de 34 personnes sur World of Warcraft pendant 3 ans. Top 3 mondial monk tank (2023). Top 0.2% joueurs européens sur Valorant. Top 3% joueurs européens sur CS2.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-tv"></i></div>
+              <div>
+                <h4 class="title" data-i18n="passions.series.title">Séries et films</h4>
+                <p class="description">Passionné par l'animation 2D/3D, avec plus de 500 séries terminées.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-book"></i></div>
+              <div>
+                <h4 class="title" data-i18n="passions.read.title">Lecture</h4>
+                <p class="description">Philosophie (Hermann Hesse), romans dystopiques et psychologiques, manga et manhwa.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Passions Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="portfolio.title">Portfolio</h2>
+        <p data-i18n="portfolio.subtitle">Découvrez mes projets créatifs et numériques.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active" data-i18n="portfolio.filter.all">Tous</li>
+            <li data-filter=".filter-app" data-i18n="portfolio.filter.games">Jeux vidéos</li>
+            <li data-filter=".filter-design" data-i18n="portfolio.filter.design">Design</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Jeux vidéos</h4>
+                  <p>The Morrigan</p>
+                  <a href="assets/img/portfolio/app-1.jpg" title="The Morrigan" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details-4.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Icone_TTU_Final%20ALLBlack.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Jeux vidéos</h4>
+                  <p>Towards the Unknown</p>
+                  <a href="assets/img/portfolio/Icone_TTU_Final%20ALLBlack.png" title="Towards the Unknown" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Test_2.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Jeux vidéos</h4>
+                  <p>Planetherium</p>
+                  <a href="assets/img/portfolio/Test_2.png" title="Planetherium" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details-5.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-5.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Jeux vidéos</h4>
+                  <p>Liegion</p>
+                  <a href="assets/img/portfolio/app-5.png" title="Liegion" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details-6.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/TTE-0.gif" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Jeux vidéos</h4>
+                  <p>Through Their Eyes</p>
+                  <a href="assets/img/portfolio/TTE-0.gif" title="Through Their Eyes" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details-7.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 isotope-item filter-design">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Proto%202.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Design</h4>
+                  <p>Toutes mes créations numériques</p>
+                  <a href="assets/img/portfolio/Proto%202.png" title="Créations numériques" data-gallery="portfolio-gallery-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details-2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="contact.title">Me contacter</h2>
+        <p data-i18n="contact.subtitle">N'hésitez pas à me contacter pour toute opportunité professionnelle.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3 data-i18n="contact.address">Adresse</h3>
+                  <p>Moselle, France</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3 data-i18n="contact.phone">Téléphone</h3>
+                  <p><a href="tel:+33760963102">+33 7 60 96 31 02</a></p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3 data-i18n="contact.email">Email</h3>
+                  <p><a href="mailto:lucas.dansac@gmail.com">lucas.dansac@gmail.com</a></p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="https://formsubmit.co/lucas.dansac@gmail.com" method="POST" data-aos="fade-up" data-aos-delay="200">
+              <!-- FormSubmit configuration -->
+              <input type="hidden" name="_subject" value="Contact depuis le portfolio CV">
+              <input type="hidden" name="_next" value="https://lucasdansaccv.web.app/#contact">
+              <input type="hidden" name="_captcha" value="false">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2" data-i18n="contact.form.name">Votre Nom</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2" data-i18n="contact.form.email">Votre Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2" data-i18n="contact.form.subject">Sujet</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2" data-i18n="contact.form.message">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <button type="submit" data-i18n="contact.form.send">Envoyer le Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">DANSAC Lucas</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="index.html" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- i18n -->
+  <script src="assets/js/i18n.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

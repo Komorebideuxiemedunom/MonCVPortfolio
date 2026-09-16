@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Créations numériques – Portfolio DANSAC Lucas</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));</script>
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="Photo de profil de DANSAC Lucas" class="img-fluid rounded-circle">
+    </div>
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">DANSAC Lucas</h1>
+    </a>
+    <div class="social-links text-center">
+      <a href="https://www.linkedin.com/in/lucas-dansac/" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html"><i class="bi bi-person navicon"></i><span data-i18n="nav.about">A propos</span></a></li>
+        <li><a href="index.html"><i class="bi bi-file-earmark-text navicon"></i><span data-i18n="nav.resume">Curriculum Vitae</span></a></li>
+        <li><a href="index.html"><i class="bi bi-images navicon"></i><span data-i18n="nav.portfolio">Portfolio</span></a></li>
+        <li><a href="index.html"><i class="bi bi-envelope navicon"></i><span data-i18n="nav.contact">Contact</span></a></li>
+        <li class="nav-theme-sep"></li>
+        <li class="nav-controls-row">
+          <label class="toggle-switch" aria-label="Basculer mode nuit/jour">
+            <i class="bi bi-sun-fill toggle-sun"></i>
+            <input type="checkbox" id="theme-toggle" role="switch">
+            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            <i class="bi bi-moon-stars-fill toggle-moon"></i>
+          </label>
+          <div class="lang-switch">
+            <button class="lang-opt active" data-lang="fr">FR</button>
+            <button class="lang-opt" data-lang="en">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Créations numériques</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <a href="index.html" class="back-to-portfolio"><i class="bi bi-arrow-left"></i> Retour au portfolio</a>
+
+        <div class="project-header" data-aos="fade-up">
+          <div class="project-meta">
+            <span class="badge-category">Design</span>
+          </div>
+          <h1>Création numérique</h1>
+          <p class="project-subtitle">Logos, character designs, wireframes UX/UI et prototypes interactifs</p>
+        </div>
+
+        <div class="row justify-content-between gy-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-details-slider init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": { "delay": 5000 },
+                  "slidesPerView": "auto",
+                  "navigation": {
+                    "nextEl": ".swiper-button-next",
+                    "prevEl": ".swiper-button-prev"
+                  },
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><img src="assets/img/portfolio/Andreia.png" alt="Création numérique"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/product-1.png" alt="Product design"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/app-1.jpg" alt="App design"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/books-2.png" alt="Books design"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/Proto%202.png" alt="Prototype 2"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/branding-1.png" alt="Branding"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/app-2.png" alt="App 2"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/zzaze.png" alt="Illustration"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/Plan%20de%20travail%201.png" alt="Plan de travail"></div>
+                <div class="swiper-slide"><img src="assets/img/Wireframe1.png" alt="Wireframe 1"></div>
+                <div class="swiper-slide"><img src="assets/img/Wireframe2.png" alt="Wireframe 2"></div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="project-description">
+              <div class="desc-intro">
+                Ici, vous découvrirez toutes mes créations numériques, réalisées aussi bien dans le cadre de mes cours que pour le plaisir.
+              </div>
+
+              <div class="contribution-section">
+                <h2>Logos</h2>
+                <div class="contribution-cards">
+                  <div class="contribution-card">
+                    <span class="card-role">Identité visuelle</span>
+                    <p>Vous trouverez ici une variété de logos créés dans différents contextes.</p>
+                    <span class="tools">Photoshop · Illustrator</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contribution-section" style="margin-top: 28px;">
+                <h2>Character Designs et Ébauches</h2>
+                <div class="contribution-cards">
+                  <div class="contribution-card">
+                    <span class="card-role">Concept Art</span>
+                    <p>Certains concepts basés à partir d'objets de la réalité ou simplement prévus pour des projets.</p>
+                    <span class="tools">Krita · Photoshop</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contribution-section" style="margin-top: 28px;">
+                <h2>Wireframes UX/UI</h2>
+                <div class="figma-embed-wrapper mt-3">
+                  <p class="embed-label">Figma Prototype 1</p>
+                  <iframe
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F0IBa0WkQrSlcrLhwMaYhbr%2FTest-XPA"
+                    height="480"
+                    allowfullscreen
+                    loading="lazy"
+                    title="Figma Prototype 1"
+                  ></iframe>
+                </div>
+
+                <div class="figma-embed-wrapper">
+                  <p class="embed-label">Figma Prototype 2</p>
+                  <iframe
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fj7AKAErvn3F20D1c6JtcYn%2FProto-Figma-1"
+                    height="480"
+                    allowfullscreen
+                    loading="lazy"
+                    title="Figma Prototype 2"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="info-sidebar">
+              <div class="info-card">
+                <h3>Informations</h3>
+                <div class="info-row">
+                  <span class="info-key">Catégorie</span>
+                  <span class="info-value">Design</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-key">Types</span>
+                  <span class="info-value">Logos · Illustrations · Wireframes</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-key">Outils</span>
+                  <span class="info-value">Photoshop · Illustrator · Krita · Adobe XD · Figma</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">DANSAC Lucas</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+    </div>
+  </footer>
+
+  <a href="portfolio-details-2.html" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
