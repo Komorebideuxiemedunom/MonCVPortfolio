@@ -1,0 +1,602 @@
+/* ============================================================
+   NEONIKALA — Visual Override Layer for MonCVPortfolio
+   DA: near-black + neon blue/pink/cyan (from neonikala.com)
+   Glass morphism, WebGL cursor trail, gooey reveal
+   ============================================================ */
+
+/* ---- Force dark palette site-wide */
+:root {
+  --background-color: #07070E;
+  --default-color:    #CBD5E1;
+  --heading-color:    #F1F5F9;
+  --accent-color:     #818CF8;
+  --accent-light:     #A5B4FC;
+  --surface-color:    rgba(255,255,255,.035);
+  --contrast-color:   #ffffff;
+
+  /* Neon palette extracted from neonikala.com */
+  --neon-blue:  #78AAFF;
+  --neon-pink:  #FF8CC8;
+  --neon-cyan:  #78FFD2;
+  --neon-glow:  rgba(120,170,255,.6);
+  --neon-glow2: rgba(255,140,200,.5);
+  --neon-glow3: rgba(120,255,210,.45);
+
+  --glass-bg:     rgba(255,255,255,.034);
+  --glass-border: rgba(255,255,255,.07);
+  --glass-blur:   18px;
+}
+
+.light-background {
+  --background-color: #0B0B15;
+  --surface-color:    rgba(255,255,255,.04);
+}
+
+/* ---- Custom scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #07070E; }
+::-webkit-scrollbar-thumb { background: rgba(120,170,255,.28); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(120,170,255,.52); }
+
+/* ---- Body background — neon radial blobs (neonikala technique) */
+body {
+  background-color: #07070E !important;
+  background-image:
+    radial-gradient(ellipse 800px 600px at -5% -10%, rgba(120,170,255,.055) 0%, transparent 68%),
+    radial-gradient(ellipse 600px 500px at 105% 105%, rgba(255,140,200,.04) 0%, transparent 68%),
+    radial-gradient(ellipse 400px 450px at 52% 28%, rgba(120,255,210,.024) 0%, transparent 62%) !important;
+  background-attachment: fixed;
+}
+
+/* ---- Hide OS cursor on pointer devices (neo cursor replaces it) */
+@media (hover: hover) and (pointer: fine) {
+  * { cursor: none !important; }
+}
+
+/* ---- Custom cursor dot */
+#neo-cursor {
+  position: fixed;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--neon-blue);
+  box-shadow:
+    0 0 8px 2px rgba(120,170,255,.75),
+    0 0 18px 4px rgba(120,170,255,.38);
+  pointer-events: none;
+  z-index: 1000000;
+  transform: translate(-50%, -50%);
+  transition: width .18s, height .18s, background .28s, box-shadow .28s;
+  mix-blend-mode: screen;
+  will-change: left, top;
+}
+#neo-cursor.cursor-hover {
+  width: 14px; height: 14px;
+  background: var(--neon-pink);
+  box-shadow:
+    0 0 12px 3px rgba(255,140,200,.8),
+    0 0 26px 6px rgba(255,140,200,.42);
+}
+
+/* ---- Custom cursor ring */
+#neo-cursor-ring {
+  position: fixed;
+  width: 38px; height: 38px;
+  border: 1px solid rgba(120,170,255,.32);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999999;
+  transform: translate(-50%, -50%);
+  transition: border-color .3s, width .22s cubic-bezier(.4,0,.2,1), height .22s cubic-bezier(.4,0,.2,1);
+  will-change: left, top;
+}
+#neo-cursor-ring.cursor-hover {
+  width: 54px; height: 54px;
+  border-color: rgba(255,140,200,.38);
+}
+
+/* ---- WebGL canvas overlay */
+#fluid-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 999997;
+}
+
+/* ---- Preloader */
+#preloader { background: #07070E; }
+#preloader:before {
+  border-color: var(--neon-blue) transparent var(--neon-cyan) transparent;
+  box-shadow: 0 0 20px rgba(120,170,255,.35);
+}
+
+/* ====================================================
+   HEADER — glassmorphism
+==================================================== */
+.header {
+  background: rgba(5,5,12,.84) !important;
+  backdrop-filter: blur(22px) saturate(1.4);
+  -webkit-backdrop-filter: blur(22px) saturate(1.4);
+  border-right: 1px solid rgba(120,170,255,.1) !important;
+  transition: background .3s;
+}
+
+/* Profile image — neon ring */
+.header .profile-img img {
+  border: 2px solid rgba(120,170,255,.22) !important;
+  box-shadow:
+    0 0 0 6px rgba(120,170,255,.055),
+    0 0 28px rgba(120,170,255,.1) !important;
+  transition: box-shadow .4s, border-color .4s !important;
+}
+.header .profile-img img:hover {
+  border-color: rgba(120,170,255,.65) !important;
+  box-shadow:
+    0 0 0 8px rgba(120,170,255,.12),
+    0 0 40px rgba(120,170,255,.32) !important;
+}
+
+/* Logo name — gradient neon text */
+.header .logo h1 {
+  font-size: 15px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--neon-blue) 0%, #C4B5FD 50%, var(--neon-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(120,170,255,.38));
+}
+
+/* Nav items */
+.navmenu a {
+  border-left: 2px solid transparent;
+  transition: all .22s ease !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  background: rgba(120,170,255,.07) !important;
+  border-left-color: var(--neon-blue) !important;
+  color: #fff !important;
+}
+.navmenu a:hover .navicon,
+.navmenu .active .navicon {
+  color: var(--neon-blue) !important;
+}
+.navmenu a:hover span,
+.navmenu .active span {
+  text-shadow: 0 0 14px rgba(120,170,255,.55) !important;
+}
+
+/* Social links */
+.header .social-links a {
+  background: rgba(255,255,255,.04) !important;
+  border: 1px solid rgba(120,170,255,.12) !important;
+}
+.header .social-links a:hover {
+  background: rgba(120,170,255,.14) !important;
+  border-color: rgba(120,170,255,.4) !important;
+  box-shadow: 0 0 14px rgba(120,170,255,.35) !important;
+  color: #fff !important;
+}
+
+/* Theme toggle track */
+#theme-toggle:checked ~ .toggle-track {
+  background: linear-gradient(135deg, var(--neon-blue), var(--accent-color)) !important;
+  box-shadow: 0 0 10px rgba(120,170,255,.35);
+}
+
+/* Lang pill active */
+.lang-opt.active {
+  background: rgba(120,170,255,.18) !important;
+  color: var(--neon-blue) !important;
+  box-shadow: 0 0 8px rgba(120,170,255,.25);
+}
+
+/* Mobile toggle */
+.header .header-toggle {
+  background: rgba(120,170,255,.14) !important;
+  border: 1px solid rgba(120,170,255,.28) !important;
+  color: var(--neon-blue) !important;
+  box-shadow: 0 0 14px rgba(120,170,255,.18);
+}
+
+/* ====================================================
+   HERO — neon ambiance
+==================================================== */
+.area {
+  background: linear-gradient(160deg, #03030A 0%, #09071A 45%, #0C0A18 100%) !important;
+  animation: none !important;
+  background-size: unset !important;
+}
+.area::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 65% 55% at 18% 52%, rgba(120,170,255,.09) 0%, transparent 68%),
+    radial-gradient(ellipse 45% 65% at 82% 28%, rgba(255,140,200,.06) 0%, transparent 68%),
+    radial-gradient(ellipse 55% 45% at 52% 92%, rgba(120,255,210,.05) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Floating circles — neon variants */
+.circles li {
+  background: rgba(120,170,255,.05) !important;
+  border-color: rgba(120,170,255,.1) !important;
+  box-shadow: 0 0 18px rgba(120,170,255,.08) !important;
+}
+.circles li:nth-child(3n) {
+  background: rgba(255,140,200,.04) !important;
+  border-color: rgba(255,140,200,.08) !important;
+}
+.circles li:nth-child(3n+2) {
+  background: rgba(120,255,210,.04) !important;
+  border-color: rgba(120,255,210,.08) !important;
+}
+
+/* Hero title — gradient neon */
+.hero h2 {
+  background: linear-gradient(135deg, #ffffff 0%, var(--neon-blue) 45%, var(--neon-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(0 0 30px rgba(120,170,255,.28));
+}
+
+/* Hero typed text */
+.hero p { color: rgba(255,255,255,.7) !important; }
+.hero p span { border-bottom-color: rgba(120,170,255,.38) !important; }
+
+/* Status badge — cyan tint */
+.status-badge {
+  background: rgba(120,255,210,.055) !important;
+  border-color: rgba(120,255,210,.22) !important;
+}
+.status-badge-dot {
+  background: #78FFD2 !important;
+  box-shadow:
+    0 0 0 3px rgba(120,255,210,.4),
+    0 0 8px 1px #78FFD2,
+    0 0 18px 4px rgba(120,255,210,.45) !important;
+}
+
+/* Hero social links */
+.hero .social-links a:hover { color: var(--neon-blue) !important; }
+
+/* ====================================================
+   SECTION TITLES — neon underline
+==================================================== */
+.section-title h2::after {
+  width: 52px !important;
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink)) !important;
+  box-shadow:
+    0 0 14px 1px rgba(120,170,255,.65),
+    0 0 28px 2px rgba(255,140,200,.32) !important;
+}
+
+/* ====================================================
+   ABOUT
+==================================================== */
+.about .col-lg-4 img {
+  border: 1px solid rgba(120,170,255,.15) !important;
+  border-radius: 20px !important;
+  box-shadow:
+    0 0 0 7px rgba(120,170,255,.045),
+    0 20px 60px rgba(0,0,0,.55),
+    0 0 40px rgba(120,170,255,.08) !important;
+}
+.about .col-lg-4 img:hover {
+  box-shadow:
+    0 0 0 9px rgba(120,170,255,.1),
+    0 28px 70px rgba(0,0,0,.6),
+    0 0 55px rgba(120,170,255,.2) !important;
+}
+.about .content .fst-italic {
+  border-left: 2px solid var(--neon-cyan) !important;
+  background: rgba(120,255,210,.03);
+}
+.about .content ul i { color: var(--neon-blue) !important; }
+
+/* ====================================================
+   SKILLS
+==================================================== */
+.skills .progress-bar-wrap { background: rgba(255,255,255,.07) !important; }
+.skills .progress-bar {
+  background: linear-gradient(90deg, var(--neon-blue) 0%, #A78BFA 50%, var(--neon-pink) 100%) !important;
+  box-shadow: 0 0 10px rgba(120,170,255,.55);
+}
+.skills .progress .skill .val {
+  background: rgba(120,170,255,.1) !important;
+  color: var(--neon-blue) !important;
+  border: 1px solid rgba(120,170,255,.2);
+}
+
+/* ====================================================
+   SERVICES CARDS — glassmorphism
+==================================================== */
+.services .service-item {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  transition: all .35s ease !important;
+}
+.services .service-item:hover {
+  background: rgba(120,170,255,.065) !important;
+  border-color: rgba(120,170,255,.22) !important;
+  box-shadow:
+    0 0 0 1px rgba(120,170,255,.12),
+    0 0 32px rgba(120,170,255,.16),
+    0 10px 40px rgba(0,0,0,.45) !important;
+  transform: translateY(-7px) !important;
+}
+.services .service-item .icon {
+  background: rgba(120,170,255,.09) !important;
+  border: 1px solid rgba(120,170,255,.18) !important;
+  border-radius: 50% !important;
+}
+.services .service-item .icon i { color: var(--neon-blue) !important; }
+.services .service-item:hover .icon {
+  background: rgba(120,170,255,.18) !important;
+  box-shadow: 0 0 18px rgba(120,170,255,.5) !important;
+}
+.services .service-item:hover .icon i { color: #fff !important; }
+
+/* Passions — pink tint */
+.passions-section .service-item {
+  background: rgba(255,140,200,.022) !important;
+}
+.passions-section .service-item .icon {
+  background: rgba(255,140,200,.07) !important;
+  border: 1px solid rgba(255,140,200,.18) !important;
+}
+.passions-section .service-item .icon i { color: var(--neon-pink) !important; }
+.passions-section .service-item:hover {
+  border-color: rgba(255,140,200,.24) !important;
+  box-shadow:
+    0 0 32px rgba(255,140,200,.16),
+    0 10px 40px rgba(0,0,0,.45) !important;
+}
+.passions-section .service-item:hover .icon {
+  background: rgba(255,140,200,.2) !important;
+  border-color: rgba(255,140,200,.4) !important;
+  box-shadow: 0 0 18px rgba(255,140,200,.5) !important;
+}
+.passions-section .service-item:hover .icon i { color: #fff !important; }
+
+/* ====================================================
+   RESUME
+==================================================== */
+.resume .resume-title { color: var(--neon-blue) !important; }
+.resume .resume-title::before { background: var(--neon-blue) !important; }
+.resume .resume-item { border-left-color: rgba(120,170,255,.28) !important; }
+.resume .resume-item h5 { color: var(--neon-cyan) !important; }
+.resume .resume-item::before {
+  border-color: var(--neon-blue) !important;
+  background: #07070E !important;
+  box-shadow:
+    0 0 0 0 transparent,
+    0 0 8px 2px rgba(120,170,255,.5) !important;
+  animation: resumeDotGlowNeo 3.4s ease-in-out infinite !important;
+}
+@keyframes resumeDotGlowNeo {
+  0%,100% { box-shadow: 0 0 0 0 transparent; }
+  50%     { box-shadow: 0 0 12px 3px rgba(120,170,255,.55); }
+}
+
+/* ====================================================
+   PORTFOLIO GRID
+==================================================== */
+.portfolio .portfolio-filters li {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(10px);
+  color: rgba(255,255,255,.55) !important;
+  transition: all .28s ease !important;
+}
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
+  background: rgba(120,170,255,.14) !important;
+  border-color: rgba(120,170,255,.42) !important;
+  color: var(--neon-blue) !important;
+  box-shadow: 0 0 16px rgba(120,170,255,.28);
+}
+
+.portfolio .portfolio-content {
+  background: rgba(5,5,12,.85) !important;
+  border: 1px solid rgba(255,255,255,.06);
+}
+.portfolio .portfolio-content img {
+  background: rgba(5,5,12,.6) !important;
+}
+.portfolio .portfolio-content:hover {
+  border-color: rgba(120,170,255,.28) !important;
+  box-shadow:
+    0 0 0 1px rgba(120,170,255,.18),
+    0 0 32px rgba(120,170,255,.2),
+    0 20px 55px rgba(0,0,0,.65) !important;
+}
+.portfolio .portfolio-content .portfolio-info {
+  background: linear-gradient(to bottom, transparent 0%, rgba(5,5,12,.96) 100%) !important;
+}
+
+/* ====================================================
+   CONTACT
+==================================================== */
+.contact .info-wrap,
+.contact form {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: 0 8px 40px rgba(0,0,0,.4) !important;
+}
+.contact .info-item i {
+  background: rgba(120,170,255,.08) !important;
+  color: var(--neon-blue) !important;
+  border: 1px solid rgba(120,170,255,.16) !important;
+}
+.contact .info-item:hover i {
+  background: rgba(120,170,255,.18) !important;
+  color: #fff !important;
+  box-shadow: 0 0 14px rgba(120,170,255,.45) !important;
+}
+.contact form input[type=text],
+.contact form input[type=email],
+.contact form textarea {
+  background: rgba(255,255,255,.04) !important;
+  border-color: rgba(255,255,255,.08) !important;
+  color: var(--default-color) !important;
+}
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: rgba(120,170,255,.5) !important;
+  box-shadow:
+    0 0 0 3px rgba(120,170,255,.12),
+    0 0 16px rgba(120,170,255,.1) !important;
+}
+.contact form button[type=submit] {
+  background: rgba(120,170,255,.1) !important;
+  border: 1px solid rgba(120,170,255,.32) !important;
+  color: var(--neon-blue) !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  padding: 13px 36px !important;
+  transition: all .3s !important;
+  backdrop-filter: blur(8px);
+}
+.contact form button[type=submit]:hover {
+  background: rgba(120,170,255,.22) !important;
+  border-color: rgba(120,170,255,.65) !important;
+  color: #fff !important;
+  box-shadow:
+    0 0 0 1px rgba(120,170,255,.3),
+    0 0 24px rgba(120,170,255,.45) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ====================================================
+   BUTTONS — glass + neon glow
+==================================================== */
+.btn-cv {
+  background: rgba(120,170,255,.1) !important;
+  border: 1px solid rgba(120,170,255,.32) !important;
+  color: var(--neon-blue) !important;
+  box-shadow: 0 0 18px rgba(120,170,255,.12) !important;
+  backdrop-filter: blur(8px);
+}
+.btn-cv:hover {
+  background: rgba(120,170,255,.2) !important;
+  border-color: rgba(120,170,255,.65) !important;
+  color: #fff !important;
+  box-shadow:
+    0 0 0 1px rgba(120,170,255,.35),
+    0 0 26px rgba(120,170,255,.5),
+    0 10px 30px rgba(120,170,255,.2) !important;
+}
+
+.btn-project-link {
+  background: rgba(120,170,255,.09) !important;
+  border: 1px solid rgba(120,170,255,.28) !important;
+  color: var(--neon-blue) !important;
+}
+.btn-project-link:hover {
+  background: rgba(120,170,255,.2) !important;
+  border-color: rgba(120,170,255,.6) !important;
+  color: #fff !important;
+  box-shadow: 0 0 20px rgba(120,170,255,.42) !important;
+}
+
+.back-to-portfolio {
+  background: var(--glass-bg);
+  border-color: rgba(120,170,255,.22) !important;
+  color: var(--neon-blue) !important;
+}
+.back-to-portfolio:hover {
+  background: rgba(120,170,255,.14) !important;
+  border-color: rgba(120,170,255,.52) !important;
+  color: #fff !important;
+}
+
+/* ====================================================
+   PORTFOLIO DETAILS — glass cards
+==================================================== */
+.portfolio-details .info-card {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.portfolio-details .contribution-card {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+.portfolio-details .contribution-card:hover {
+  border-color: rgba(120,170,255,.25) !important;
+  box-shadow: 0 0 22px rgba(120,170,255,.12) !important;
+}
+.portfolio-details .desc-intro {
+  background: rgba(120,170,255,.045) !important;
+  border-left-color: var(--neon-blue) !important;
+}
+.portfolio-details .portfolio-details-slider .swiper-button-prev,
+.portfolio-details .portfolio-details-slider .swiper-button-next {
+  background: rgba(120,170,255,.22) !important;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(120,170,255,.2) !important;
+}
+.portfolio-details .portfolio-details-slider .swiper-button-prev:hover,
+.portfolio-details .portfolio-details-slider .swiper-button-next:hover {
+  background: rgba(120,170,255,.46) !important;
+  box-shadow: 0 0 18px rgba(120,170,255,.42) !important;
+}
+.portfolio-details .info-card h3 { color: var(--neon-blue) !important; }
+.portfolio-details .contribution-card .card-role { color: var(--neon-blue) !important; }
+.badge-category {
+  background: rgba(120,170,255,.09) !important;
+  color: var(--neon-blue) !important;
+  border: 1px solid rgba(120,170,255,.2) !important;
+}
+
+/* Figma embeds */
+.figma-embed-wrapper iframe { border-color: var(--glass-border) !important; }
+
+/* ====================================================
+   FOOTER
+==================================================== */
+footer {
+  background: rgba(3,3,10,.9) !important;
+  border-top: 1px solid rgba(120,170,255,.08) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* ====================================================
+   SCROLL TOP
+==================================================== */
+.scroll-top {
+  background: rgba(120,170,255,.1) !important;
+  border: 1px solid rgba(120,170,255,.28) !important;
+  box-shadow: 0 0 14px rgba(120,170,255,.2) !important;
+}
+.scroll-top i { color: var(--neon-blue) !important; }
+.scroll-top:hover {
+  background: rgba(120,170,255,.22) !important;
+  box-shadow: 0 0 24px rgba(120,170,255,.5) !important;
+}
+
+/* ====================================================
+   GOOEY SCROLL REVEAL
+==================================================== */
+.gooey-reveal {
+  opacity: 0.01;
+  filter: blur(20px);
+  will-change: filter, opacity;
+}
+.gooey-reveal.is-revealed {
+  opacity: 1;
+  filter: blur(0);
+  transition: opacity 1.1s cubic-bezier(.4,0,.2,1), filter 1.1s cubic-bezier(.4,0,.2,1);
+}
