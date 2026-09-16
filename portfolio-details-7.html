@@ -18,10 +18,14 @@
   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
-  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));</script>
+  <link href="assets/css/neo-overrides.css" rel="stylesheet">
+  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'dark')').matches?'dark':'light'));</script>
 </head>
 
 <body class="portfolio-details-page">
+  <div id="neo-cursor"></div>
+  <div id="neo-cursor-ring"></div>
+  <canvas id="fluid-canvas"></canvas>
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -192,5 +196,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/neo-effects.js"></script>
 </body>
 </html>
+
