@@ -9,6 +9,8 @@
       'nav.contact':   'Contact',
 
       'hero.subtitle': 'Je suis ',
+      'hero.tagline':  'Entre gestion de projet, design et créativité — je fais avancer les idées, du brief à la livraison.',
+      'hero.response': 'Réponds sous 24-48h',
 
       'about.title':          'A Propos',
       'about.subtitle':       "Master en Management de la Création Numérique · Plus de 4 ans d'expérience en gestion de projet, design et communication digitale.",
@@ -63,6 +65,15 @@
       'portfolio.filter.games': 'Jeux vidéos',
       'portfolio.filter.design':'Design',
 
+      'trust.label': 'Universités & entreprises',
+
+      'testimonials.title':      'Ce qu\'on dit de moi',
+      'testimonials.subtitle':   'Retours de personnes avec qui j\'ai travaillé.',
+      'testimonials.1.text':     "Lucas a pleinement participé à la réflexion stratégique de communication, a apporté un nouveau regard et proposé des améliorations. Son expertise de la prise de parole sur les nouveaux médias nous a ouvert de belles perspectives.",
+      'testimonials.1.role':     'Responsable du pôle communication, Université de Lorraine',
+      'testimonials.2.text':     "Nous lui avons assigné des tâches d'assistanat de production sur deux longs métrages et il a su s'adapter rapidement, faisant preuve de rigueur et d'initiative. Assez rapidement, nous avons pu le laisser en autonomie. Nous étions satisfaits de son travail à l'issue de son stage.",
+      'testimonials.2.role':     'Production Manager, Mélusine Studio',
+
       'contact.title':        'Me contacter',
       'contact.subtitle':     "N'hésitez pas à me contacter pour toute opportunité professionnelle.",
       'contact.address':      'Adresse',
@@ -81,6 +92,8 @@
       'nav.contact':   'Contact',
 
       'hero.subtitle': 'I am ',
+      'hero.tagline':  'Between project management, design and creativity — I move ideas forward, from brief to delivery.',
+      'hero.response': 'Replies within 24-48h',
 
       'about.title':          'About',
       'about.subtitle':       "Master's in Digital Creation Management · 4+ years of experience in project management, design and digital communication.",
@@ -134,6 +147,15 @@
       'portfolio.filter.all':   'All',
       'portfolio.filter.games': 'Video games',
       'portfolio.filter.design':'Design',
+
+      'trust.label': 'Universities & companies',
+
+      'testimonials.title':      'What people say',
+      'testimonials.subtitle':   "Feedback from people I've worked with.",
+      'testimonials.1.text':     "Lucas fully took part in our strategic communication planning, bringing a fresh perspective and suggesting improvements. His expertise on new media platforms opened up great opportunities for us.",
+      'testimonials.1.role':     'Head of Communications, Université de Lorraine',
+      'testimonials.2.text':     "We assigned him production assistant tasks on two feature films, and he adapted quickly, showing rigor and initiative. We were soon able to let him work independently. We were satisfied with his work by the end of his internship.",
+      'testimonials.2.role':     'Production Manager, Mélusine Studio',
 
       'contact.title':        'Get in touch',
       'contact.subtitle':     'Feel free to contact me for any professional opportunity.',

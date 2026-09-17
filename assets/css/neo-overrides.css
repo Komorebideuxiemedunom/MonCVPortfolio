@@ -288,6 +288,38 @@ body {
   .status-badge-dot { animation: none; }
 }
 
+/* Tagline hero — accroche sous le rôle qui défile */
+.hero-tagline {
+  font-size: 16px !important;
+  letter-spacing: normal !important;
+  color: rgba(255,255,255,.55) !important;
+  max-width: 520px;
+  margin: 10px auto 0 !important;
+  line-height: 1.5;
+}
+
+/* Rangée de badges hero — statut + réactivité */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 22px;
+}
+.hero-badges .status-badge { margin-top: 0; }
+
+/* Badge secondaire (réactivité) — accent bleu plutôt que mint */
+.status-badge-secondary {
+  border-color: rgba(88,180,255,.35) !important;
+}
+.status-badge-secondary::before {
+  background: linear-gradient(180deg, var(--neo-blue), var(--neo-violet));
+}
+.status-badge-secondary i {
+  color: var(--neo-blue);
+  font-size: 14px;
+}
+
 /* ============================================================
    SECTION TITLES
 ============================================================ */
@@ -783,4 +815,83 @@ footer {
 .glass-toast-close:hover { color: rgba(255,255,255,.9); }
 @media (prefers-reduced-motion: reduce) {
   .glass-toast { transition: opacity .2s ease; transform: none !important; }
+}
+
+/* ============================================================
+   TRUST BAR — universités & entreprises (wordmarks, pas de logos
+   image : cohérence visuelle garantie, aucun droit à gérer)
+============================================================ */
+.trust-bar {
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+}
+.trust-bar-label {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  margin: 0 0 20px;
+  letter-spacing: .3px;
+}
+.trust-bar-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  row-gap: 16px;
+}
+.trust-logo {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .2px;
+  color: rgba(255,255,255,.38);
+  white-space: nowrap;
+  transition: color .3s, filter .3s;
+  cursor: default;
+}
+.trust-logo:hover {
+  color: var(--neo-blue);
+  filter: drop-shadow(0 0 8px rgba(88,180,255,.35));
+}
+
+/* ============================================================
+   TESTIMONIALS
+============================================================ */
+.testimonial-card {
+  position: relative;
+  height: 100%;
+  padding: 32px 28px 28px;
+  border-radius: 8px;
+  background: var(--surface-color);
+  border: 1px solid var(--border);
+}
+.testimonial-quote-icon {
+  display: block;
+  font-size: 26px;
+  color: var(--neo-blue);
+  opacity: .5;
+  margin-bottom: 12px;
+}
+.testimonial-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--default-color);
+  margin-bottom: 20px;
+}
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.testimonial-author strong {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  font-size: 15px;
+}
+.testimonial-author span {
+  font-size: 13px;
+  color: rgba(255,255,255,.5);
 }
