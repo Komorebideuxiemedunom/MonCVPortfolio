@@ -52,6 +52,7 @@
       'resume.subtitle': 'Mon parcours académique et professionnel.',
       'resume.edu':      'Formation',
       'resume.exp':      'Expériences Professionnelles',
+      'resume.volunteer':'Bénévolat',
 
       'passions.title':        'Passions',
       'passions.subtitle':     'Ce qui me passionne en dehors du travail.',
@@ -135,6 +136,7 @@
       'resume.subtitle': 'My academic and professional background.',
       'resume.edu':      'Education',
       'resume.exp':      'Work Experience',
+      'resume.volunteer':'Volunteering',
 
       'passions.title':        'Interests',
       'passions.subtitle':     'What I am passionate about outside of work.',
