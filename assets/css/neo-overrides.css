@@ -895,3 +895,39 @@ footer {
   font-size: 13px;
   color: rgba(255,255,255,.5);
 }
+
+/* ============================================================
+   PROJECT STORY — Problème / Ce que j'ai fait / Résultat
+============================================================ */
+.project-story {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 24px 0 28px;
+}
+.story-block {
+  padding: 2px 0 2px 20px;
+  border-left: 2px solid color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+.story-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 6px;
+}
+.story-block p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--default-color);
+  margin: 0;
+}
+.story-block-result {
+  border-left-color: var(--neo-mint);
+}
+.story-block-result .story-label { color: var(--neo-mint); }
+
+.story-block-status {
+  border-left-color: var(--neo-blue);
+}
+.story-block-status .story-label { color: var(--neo-blue); }

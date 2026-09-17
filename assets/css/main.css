@@ -597,7 +597,8 @@ section,
   padding-bottom: 5px; font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 12%);
 }
-.resume .resume-item:last-child { padding-bottom: 0; }
+.resume .resume-item:last-child,
+.resume .resume-item:has(+ .resume-title) { padding-bottom: 0; }
 .resume .resume-item::before {
   content: "";
   position: absolute;
