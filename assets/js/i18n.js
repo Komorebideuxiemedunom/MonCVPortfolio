@@ -9,7 +9,7 @@
       'nav.contact':   'Contact',
 
       'hero.subtitle': 'Je suis ',
-      'hero.tagline':  'Entre gestion de projet, design et créativité — je fais avancer les idées, du brief à la livraison.',
+      'hero.tagline':  'Lucas Dansac : entre gestion de projet, design et créativité — je fais avancer les idées, du brief à la livraison.',
       'hero.response': 'Réponds sous 24-48h',
 
       'about.title':          'A Propos',
@@ -93,7 +93,7 @@
       'nav.contact':   'Contact',
 
       'hero.subtitle': 'I am ',
-      'hero.tagline':  'Between project management, design and creativity — I move ideas forward, from brief to delivery.',
+      'hero.tagline':  'Lucas Dansac: between project management, design and creativity — I move ideas forward, from brief to delivery.',
       'hero.response': 'Replies within 24-48h',
 
       'about.title':          'About',
