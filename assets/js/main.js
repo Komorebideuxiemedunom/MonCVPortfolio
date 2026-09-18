@@ -89,42 +89,9 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Init typed.js
-   */
-  document.addEventListener('DOMContentLoaded', function() {
-    const dynamicRole = document.getElementById('dynamic-role');
-    if (dynamicRole) {
-      new Typed('#dynamic-role', {
-        strings: ["Project Manager", "UX/UI Designer", "VFX Designer"],
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 1000,
-        loop: true
-      });
-    }
-  });
-
-  /**
    * Initiate Pure Counter
    */
   new PureCounter();
-
-  /**
-   * Animate the skills items on reveal
-   */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
-      }
-    });
-  });
 
   /**
    * Initiate glightbox — runs on load so it also picks up

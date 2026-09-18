@@ -931,3 +931,173 @@ footer {
   border-left-color: var(--neo-blue);
 }
 .story-block-status .story-label { color: var(--neo-blue); }
+
+/* ============================================================
+   HERO — fil conducteur (positionnement transverse)
+============================================================ */
+.hero-subtitle {
+  font-size: 15px !important;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5) !important;
+  margin: 14px 0 4px !important;
+}
+.hero-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 4px;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4px 0;
+}
+.flow-word {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 15px;
+  color: rgba(255,255,255,.72);
+  white-space: nowrap;
+}
+.flow-word:first-child,
+.flow-word-last {
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--neo-blue), var(--neo-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.flow-arrow {
+  font-size: 11px;
+  color: rgba(255,255,255,.28);
+}
+@media (max-width: 576px) {
+  .hero-flow { gap: 4px 3px; }
+  .flow-word { font-size: 13px; }
+}
+
+/* ============================================================
+   ABOUT — phrase de positionnement (relier les disciplines)
+============================================================ */
+.about-throughline {
+  margin: 8px 0 0;
+  padding: 14px 18px;
+  border-left: 2px solid var(--neo-blue);
+  background: color-mix(in srgb, var(--neo-blue), transparent 94%);
+  border-radius: 0 10px 10px 0;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--default-color);
+}
+
+/* ============================================================
+   SERVICES — étiquette de famille (montre les liens entre cartes)
+============================================================ */
+.service-tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--neo-blue);
+  background: color-mix(in srgb, var(--neo-blue), transparent 88%);
+  padding: 3px 9px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* ============================================================
+   SKILLS — familles de compétences (remplace les jauges %)
+============================================================ */
+.skill-group {
+  height: 100%;
+  padding: 24px 22px;
+  border-radius: 14px;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  transition: border-color .3s ease, transform .3s ease;
+}
+.skill-group:hover {
+  border-color: color-mix(in srgb, var(--neo-blue), transparent 65%);
+  transform: translateY(-3px);
+}
+.skill-group-tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--neo-violet);
+  background: color-mix(in srgb, var(--neo-violet), transparent 88%);
+  padding: 3px 9px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.skill-group h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 6px;
+}
+.skill-group-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  margin: 0 0 16px;
+}
+.skill-rows {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.skill-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--default-color);
+}
+.skill-level {
+  flex-shrink: 0;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  padding: 3px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.skill-level.level-expert {
+  color: #fff;
+  background: linear-gradient(90deg, var(--neo-blue), var(--neo-violet));
+}
+.skill-level.level-solid {
+  color: var(--neo-blue);
+  background: color-mix(in srgb, var(--neo-blue), transparent 85%);
+}
+.skill-level.level-good {
+  color: var(--neo-mint);
+  background: color-mix(in srgb, var(--neo-mint), transparent 85%);
+}
+.skill-level.level-familiar {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/* ============================================================
+   RESUME — fil rouge du parcours
+============================================================ */
+.resume-throughline {
+  font-size: 13.5px;
+  font-style: italic;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: -14px 0 22px;
+}
