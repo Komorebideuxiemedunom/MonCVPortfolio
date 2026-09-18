@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin:0; padding:0; background:#0F0E17; }
+  svg { display:block; }
+</style>
+</head>
+<body>
+<svg width="512" height="512" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#58B4FF"/>
+      <stop offset="100%" stop-color="#B87AFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="#0F0E17"/>
+  <!-- vertical spike through the rune -->
+  <rect x="47.4" y="14" width="5.2" height="72" rx="2.6" fill="url(#g)"/>
+  <!-- top triangle (apex up) -->
+  <path d="M 50 20 L 28 46 L 72 46 Z" fill="url(#g)"/>
+  <!-- bottom triangle (apex down) -->
+  <path d="M 50 80 L 28 54 L 72 54 Z" fill="url(#g)"/>
+  <!-- center cutout diamond to read as hourglass, punches through triangles -->
+  <path d="M 50 40 L 58 50 L 50 60 L 42 50 Z" fill="#0F0E17"/>
+</svg>
+</body>
+</html>
