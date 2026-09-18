@@ -554,6 +554,13 @@ section,
   margin-bottom: 8px;
   font-style: italic;
 }
+.resume .resume-item-intro {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 12%);
+  margin: 4px 0 10px;
+}
 .resume .resume-item ul { padding-left: 16px; margin-top: 6px; }
 .resume .resume-item ul li {
   padding-bottom: 5px; font-size: 14px;

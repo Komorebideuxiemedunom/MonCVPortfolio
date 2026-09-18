@@ -8,8 +8,8 @@
       'nav.portfolio': 'Portfolio',
       'nav.contact':   'Contact',
 
-      'hero.subtitle': 'Un profil qui relie',
-      'hero.tagline':  "Je transforme une idée en projet concret, sans perdre la vue d'ensemble entre le premier brief et la mise en ligne.",
+      'hero.subtitle': 'Un profil qui relie plusieurs métiers',
+      'hero.tagline':  "Je pilote des projets, et je sais aussi mettre les mains dans la création quand il le faut.",
       'hero.response': 'Réponds sous 24-48h',
 
       'flow.strategy':  'Stratégie',
@@ -21,8 +21,8 @@
 
       'about.title':          'A Propos',
       'about.subtitle':       "Master en Management de la Création Numérique · Plus de 4 ans d'expérience en gestion de projet, design et communication digitale.",
-      'about.h2':             'Chef de Projet & Designer Numérique · Profil créatif & pluridisciplinaire',
-      'about.body1':          "Diplômé d'un master en management de la création numérique, je pilote des projets de l'idée au livrable en combinant rigueur méthodologique et sensibilité créative. Mon parcours couvre la gestion de projet Agile, le design UX/UI, la communication digitale et la production de jeux vidéo — des compétences appliquées aussi bien en entreprise qu'en production indépendante.",
+      'about.h2':             'Chef de projet, créatif et communicant',
+      'about.body1':          "Diplômé d'un master en management de la création numérique, je pilote des projets de l'idée au livrable, en combinant rigueur méthodologique et sensibilité créative. Mon parcours couvre la gestion de projet Agile, le design UX/UI, la communication digitale et la production de jeux vidéo. J'utilise ces compétences aussi bien en entreprise qu'en production indépendante.",
       'about.body2':          "Actuellement Chargé de Communication & Marketing Digital chez Q-Leap S.A (Luxembourg), je ne suis pas activement en recherche mais reste ouvert aux opportunités intéressantes en gestion de projet, communication ou design, dans des environnements créatifs, tech ou gaming.",
       'about.label.birthday': 'Naissance :',
       'about.label.driving':  'Permis :',
@@ -32,10 +32,10 @@
       'about.val.avail':      'Ouvert aux opportunités',
       'about.badge':          'Ouvert aux opportunités',
       'about.download':       'Télécharger mon CV',
-      'about.throughline':    "Ce qui me distingue n'est pas de savoir faire un peu de tout, mais de savoir relier ces disciplines : je pars du besoin, je le structure en projet, je lui donne forme par la création, je la prototype ou je l'intègre techniquement, je la fais connaître, et je la livre.",
+      'about.throughline':    "Ce qui compte, ce n'est pas de savoir un peu de tout. C'est de comprendre un projet dans sa globalité, de collaborer avec différents profils, et de pouvoir mettre moi-même les mains dans la production quand c'est nécessaire.",
 
       'skills.title':    'Compétences',
-      'skills.subtitle': "Cinq familles d'outils qui se répondent : la coordination structure le projet, la création lui donne forme, la tech le prototype, le digital le diffuse, la communication le fait vivre.",
+      'skills.subtitle': "Cinq familles d'outils, qui se répondent selon les besoins du projet.",
       'skills.mgmt':     'Outils de gestion (Trello, Monday, Hacknplan)',
       'skills.veille':   'Veille informatique',
       'skills.methods':  'Méthodes Agile (Scrum, Kanban)',
@@ -47,10 +47,10 @@
       'skills.emailing':    'E-mailing',
       'skills.multitarget': 'Multi-cible (B2B/B2C)',
 
-      'skills.level.expert':   'Expertise',
-      'skills.level.solid':    'Solide maîtrise',
-      'skills.level.good':     'Bonne maîtrise',
-      'skills.level.familiar': 'Environnement / familiarité',
+      'skills.level.expert':   'Maîtrise',
+      'skills.level.solid':    'Bonne maîtrise',
+      'skills.level.good':     'Pratique régulière',
+      'skills.level.familiar': 'Notions',
 
       'skills.group.project.tag':     'Projet',
       'skills.group.project.title':   'Coordination & Pilotage',
@@ -93,7 +93,7 @@
       'resume.edu':      'Formation',
       'resume.exp':      'Expériences Professionnelles',
       'resume.volunteer':'Bénévolat',
-      'resume.throughline': "Un même mouvement du début à aujourd'hui : élargir progressivement mon terrain d'action, de la production créative vers la coordination, la communication et la gestion de projet transverse.",
+      'resume.throughline': "Ça commence par la création : VFX, 3D, game design, avec déjà des équipes à coordonner pendant mes études. Le rôle s'élargit ensuite vers la coordination de projets plus larges, puis la communication et les outils digitaux chez Q-Leap.",
 
       'passions.title':        'Passions',
       'passions.subtitle':     'Ce qui me passionne en dehors du travail.',
@@ -133,8 +133,8 @@
       'nav.portfolio': 'Portfolio',
       'nav.contact':   'Contact',
 
-      'hero.subtitle': 'A profile that connects',
-      'hero.tagline':  'I turn an idea into a finished project, keeping the big picture from the first brief to launch.',
+      'hero.subtitle': 'A profile that connects several trades',
+      'hero.tagline':  "I run projects, and I can also get hands-on with the creative work when it's needed.",
       'hero.response': 'Replies within 24-48h',
 
       'flow.strategy':  'Strategy',
@@ -146,8 +146,8 @@
 
       'about.title':          'About',
       'about.subtitle':       "Master's in Digital Creation Management · 4+ years of experience in project management, design and digital communication.",
-      'about.h2':             'Project Manager & Digital Designer · Creative & Multidisciplinary',
-      'about.body1':          "With a Master's in digital creation management, I lead projects from concept to delivery by combining methodological rigor with creative sensibility. My background spans Agile project management, UX/UI design, digital communication and video game production — skills applied both in professional settings and independent production.",
+      'about.h2':             'Project manager, creative and communicator',
+      'about.body1':          "With a Master's in digital creation management, I lead projects from concept to delivery, combining methodological rigor with creative sensibility. My background spans Agile project management, UX/UI design, digital communication and video game production. I apply these skills both in professional settings and independent production.",
       'about.body2':          "Currently working as Digital Marketing & Communication Manager at Q-Leap S.A (Luxembourg), I'm not actively job-hunting but stay open to interesting opportunities in project management, communication or design, within creative, tech or gaming environments.",
       'about.label.birthday': 'Birthday:',
       'about.label.driving':  'Driving:',
@@ -157,10 +157,10 @@
       'about.val.avail':      'Open to opportunities',
       'about.badge':          'Open to opportunities',
       'about.download':       'Download my CV',
-      'about.throughline':    "What sets me apart isn't knowing how to do a bit of everything, but knowing how to connect these disciplines: I start from the need, structure it into a project, give it shape through creation, prototype or technically integrate it, make it known, and deliver it.",
+      'about.throughline':    "What matters isn't knowing a bit of everything. It's understanding a project as a whole, working with different profiles, and being able to get hands-on with production myself when it's needed.",
 
       'skills.title':    'Skills',
-      'skills.subtitle': "Five families of tools that work together: coordination structures the project, creation gives it shape, tech prototypes it, digital distributes it, communication brings it to life.",
+      'skills.subtitle': "Five families of tools, that work together depending on what the project needs.",
       'skills.mgmt':     'Management tools (Trello, Monday, Hacknplan)',
       'skills.veille':   'Tech monitoring',
       'skills.methods':  'Agile methods (Scrum, Kanban)',
@@ -172,10 +172,10 @@
       'skills.emailing':    'Emailing',
       'skills.multitarget': 'Multi-target (B2B/B2C)',
 
-      'skills.level.expert':   'Expert',
-      'skills.level.solid':    'Solid command',
-      'skills.level.good':     'Good command',
-      'skills.level.familiar': 'Working familiarity',
+      'skills.level.expert':   'Strong command',
+      'skills.level.solid':    'Good command',
+      'skills.level.good':     'Regular practice',
+      'skills.level.familiar': 'Basics',
 
       'skills.group.project.tag':     'Project',
       'skills.group.project.title':   'Coordination & Leadership',
@@ -218,7 +218,7 @@
       'resume.edu':      'Education',
       'resume.exp':      'Work Experience',
       'resume.volunteer':'Volunteering',
-      'resume.throughline': "One consistent movement from the start until today: progressively widening my scope, from creative production toward coordination, communication and cross-disciplinary project management.",
+      'resume.throughline': "It starts with creation: VFX, 3D, game design, already coordinating small teams during my studies. The role then widens toward coordinating bigger projects, then communication and digital tools at Q-Leap.",
 
       'passions.title':        'Interests',
       'passions.subtitle':     'What I am passionate about outside of work.',
