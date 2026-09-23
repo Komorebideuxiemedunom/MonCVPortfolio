@@ -1,12 +1,12 @@
 :root {
-  --bg: #06060F;
-  --ink: #FFFFFF;
-  --body-color: #C8CDD8;
-  --muted: #8A90A0;
-  --blue: #58B4FF;
-  --violet: #B87AFF;
-  --mint: #58EBC8;
-  --line: rgba(255,255,255,.12);
+  --bg: #FFFFFF;
+  --ink: #17181C;
+  --body-color: #2E313A;
+  --muted: #6B7280;
+  --blue: #2F6FED;
+  --violet: #7C3AED;
+  --green: #15803D;
+  --line: rgba(17,17,17,.10);
 }
 
 * { box-sizing: border-box; }
@@ -36,7 +36,7 @@ html, body {
   font-weight: 700;
   font-size: 21pt;
   margin: 0 0 1.2mm;
-  color: #fff;
+  color: var(--ink);
 }
 .head h1 .surname {
   color: var(--violet);
@@ -63,15 +63,16 @@ html, body {
   font-family: 'Poppins', sans-serif;
   font-size: 8.2pt;
   font-weight: 600;
-  color: var(--mint);
-  border: 1px solid rgba(88,235,200,.4);
+  color: var(--green);
+  background: #EAF7EE;
+  border: 1px solid rgba(21,128,61,.35);
   border-radius: 5mm;
   padding: 1.1mm 3.5mm;
 }
 .dot {
   width: 2mm; height: 2mm;
   border-radius: 50%;
-  background: var(--mint);
+  background: var(--green);
   flex-shrink: 0;
 }
 
@@ -79,7 +80,7 @@ html, body {
   height: 1.5px;
   background: linear-gradient(90deg, var(--blue), var(--violet));
   margin-top: 2mm;
-  opacity: .8;
+  opacity: .5;
 }
 
 /* ---------------- SECTIONS ---------------- */
@@ -97,9 +98,16 @@ section:last-child { margin-bottom: 0; }
   gap: 2.5mm;
   margin: 0 0 1mm;
 }
+.section-title .mark { background: var(--blue); }
+.section-title.c-violet { color: var(--violet); }
+.section-title.c-violet .mark { background: var(--violet); }
+.section-title.c-blue { color: var(--blue); }
+.section-title.c-blue .mark { background: var(--blue); }
+.section-title.c-green { color: var(--green); }
+.section-title.c-green .mark { background: var(--green); }
+
 .mark {
   width: 2.6mm; height: 2.6mm;
-  background: var(--blue);
   flex-shrink: 0;
 }
 
@@ -111,7 +119,7 @@ section:last-child { margin-bottom: 0; }
 }
 .profil-text:last-child { margin-bottom: 0; }
 .profil-add {
-  color: #DCE0EA;
+  color: #1F2128;
 }
 
 /* ---------------- SKILLS ---------------- */
@@ -122,7 +130,7 @@ section:last-child { margin-bottom: 0; }
   margin: 0 0 0.9mm;
 }
 .skill-line:last-child { margin-bottom: 0; }
-.skill-line strong { color: #fff; font-weight: 700; }
+.skill-line strong { color: var(--ink); font-weight: 700; }
 
 /* ---------------- EXPERIENCE ---------------- */
 .exp-throughline {
@@ -136,22 +144,9 @@ section:last-child { margin-bottom: 0; }
 
 .exp-item {
   margin-bottom: 0.5mm;
-  padding-left: 4mm;
-  border-left: 1.5px solid var(--line);
   position: relative;
 }
 .exp-item:last-child { margin-bottom: 0; }
-.exp-item::before {
-  content: "";
-  position: absolute;
-  left: -3mm;
-  top: 1.2mm;
-  width: 2.2mm;
-  height: 2.2mm;
-  border-radius: 50%;
-  border: 1.3px solid var(--blue);
-  background: var(--bg);
-}
 
 .exp-head {
   display: flex;
@@ -163,7 +158,7 @@ section:last-child { margin-bottom: 0; }
 .exp-title {
   font-size: 9.3pt;
   font-weight: 700;
-  color: #fff;
+  color: var(--ink);
   margin: 0;
   line-height: 1.35;
   flex: 1;
@@ -172,7 +167,8 @@ section:last-child { margin-bottom: 0; }
 .exp-title .sep { color: var(--muted); font-weight: 400; }
 .exp-date {
   font-size: 8pt;
-  color: var(--mint);
+  font-weight: 700;
+  color: var(--green);
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -206,7 +202,7 @@ section:last-child { margin-bottom: 0; }
   width: 1.3mm;
   height: 1.3mm;
   border-radius: 50%;
-  background: var(--blue);
+  background: var(--violet);
 }
 
 /* ---------------- FORMATION ---------------- */
@@ -222,8 +218,9 @@ section:last-child { margin-bottom: 0; }
 .edu-title {
   font-size: 9pt;
   font-weight: 700;
-  color: #fff;
+  color: var(--ink);
   margin: 0;
   line-height: 1.35;
 }
 .edu-title .sep { color: var(--muted); font-weight: 400; }
+.edu-row .exp-date { color: var(--green); }
