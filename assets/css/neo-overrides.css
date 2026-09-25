@@ -1101,3 +1101,219 @@ footer {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: -14px 0 22px;
 }
+
+/* ============================================================
+   Q-LEAP — case study (4 axes, projets clés, cycle de travail)
+============================================================ */
+.qleap-intro {
+  max-width: 860px;
+  margin: 0 auto 40px;
+  padding: 26px 28px;
+  border-left: 2px solid var(--neo-blue);
+  background: color-mix(in srgb, var(--neo-blue), transparent 95%);
+  border-radius: 0 14px 14px 0;
+}
+.qleap-intro-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.qleap-intro-meta .service-tag { margin-bottom: 0; }
+.qleap-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: var(--neo-mint);
+}
+.qleap-status .status-badge-dot { margin: 0; }
+.qleap-heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 12px;
+}
+.qleap-lead {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--default-color);
+  margin: 0 0 8px;
+}
+.qleap-lead:last-child { margin-bottom: 0; }
+
+.qleap-axis {
+  height: 100%;
+  padding: 26px 24px 22px;
+  border-radius: 14px;
+  background: var(--surface-color);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+.qleap-axis:hover {
+  border-color: rgba(88,180,255,.22);
+  box-shadow: 0 0 30px rgba(88,180,255,.08), 0 8px 36px rgba(0,0,0,.35);
+  transform: translateY(-3px);
+}
+.qleap-axis-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.qleap-axis-num {
+  flex-shrink: 0;
+  font-family: var(--heading-font);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--neo-blue), var(--neo-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.qleap-axis h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 3px;
+}
+.qleap-axis-sub {
+  font-size: 13px;
+  color: var(--neo-mint);
+  margin: 0;
+}
+.qleap-axis ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  flex-grow: 1;
+}
+.qleap-axis ul li {
+  position: relative;
+  padding: 0 0 7px 16px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
+}
+.qleap-axis ul li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .6em;
+  width: 6px; height: 1px;
+  background: var(--neo-blue);
+}
+.qleap-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.qleap-chips span {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--neo-blue);
+  background: color-mix(in srgb, var(--neo-blue), transparent 88%);
+  padding: 3px 10px;
+  border-radius: 8px;
+}
+.qleap-chips .qleap-chip-kpi {
+  color: var(--neo-mint);
+  background: transparent;
+  border: 1px dashed color-mix(in srgb, var(--neo-mint), transparent 45%);
+}
+
+.qleap-block-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--neo-blue);
+  margin: 56px 0 20px;
+  text-align: center;
+}
+.qleap-project {
+  height: 100%;
+  padding: 22px 22px 20px;
+  border-radius: 14px;
+  background: var(--surface-color);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--neo-violet);
+  transition: border-color .3s ease, transform .3s ease;
+}
+.qleap-project:hover {
+  border-color: rgba(184,122,255,.3);
+  transform: translateY(-3px);
+}
+.qleap-project-status {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--neo-mint);
+  background: color-mix(in srgb, var(--neo-mint), transparent 88%);
+  padding: 3px 9px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.qleap-project h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0 0 4px;
+}
+.qleap-project-role {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--neo-violet);
+  margin: 0 0 8px;
+}
+.qleap-project-scope {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0;
+}
+
+.qleap-how { text-align: center; }
+.qleap-cycle {
+  max-width: 720px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface-color);
+}
+.qleap-cycle .flow-word { text-transform: uppercase; letter-spacing: .05em; font-size: 14px; }
+.qleap-how-text {
+  max-width: 620px;
+  margin: 16px auto 0;
+  font-size: 14.5px;
+  font-style: italic;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
+
+.resume-case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neo-blue);
+}
+.resume-case-link:hover { color: var(--neo-violet); }
+
+@media (max-width: 576px) {
+  .qleap-intro { padding: 20px 18px; }
+  .qleap-heading { font-size: 18px; }
+  .qleap-axis { padding: 22px 18px 18px; }
+  .qleap-axis-num { font-size: 24px; }
+  .qleap-cycle .flow-word { font-size: 12px; }
+}

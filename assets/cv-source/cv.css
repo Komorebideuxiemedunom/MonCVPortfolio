@@ -227,3 +227,4 @@ section:last-child { margin-bottom: 0; }
   line-height: 1.35;
 }
 .edu-title .sep { color: var(--muted); font-weight: 400; }
+.exp-item ul li strong { color: #fff; font-weight: 700; }
