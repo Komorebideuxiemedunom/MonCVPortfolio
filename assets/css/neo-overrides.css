@@ -1625,3 +1625,109 @@ footer {
 .contact-location { margin: 14px 0 0; font-size: 13px; color: color-mix(in srgb, var(--default-color), transparent 15%); }
 .contact-form-intro { font-size: 14px; color: color-mix(in srgb, var(--default-color), transparent 10%); margin: 0 0 14px; }
 .footer .copyright a { color: var(--neo-blue); }
+
+/* ============================================================
+   REPOSITIONNEMENT 2026-09 — gestion de projet, Q-Leap central
+============================================================ */
+.hero-contact { margin: 14px 0 0 !important; font-size: 14px; }
+.hero-contact a { color: rgba(255,255,255,.75); border-bottom: 1px solid rgba(88,180,255,.4); }
+.hero-contact a:hover { color: #fff; border-bottom-color: var(--neo-blue); }
+
+/* En ce moment : trois sujets, chacun avec ses mots-clés */
+.currently-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 14px;
+  text-align: left;
+}
+.currently-list li strong { font-size: 13px; color: var(--text-head); }
+.currently-list li span { font-size: 11.5px; font-weight: 500; color: color-mix(in srgb, var(--default-color), transparent 15%); }
+
+/* Repères chiffrés (À propos) */
+.about-stats { grid-template-columns: repeat(5, 1fr); max-width: none; margin: 40px 0 0; }
+@media (max-width: 991px) { .about-stats { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 576px) {
+  .about-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .about-stats li { padding: 12px 14px; }
+  .about-stats strong { font-size: 24px; }
+  .about-stats .is-target { grid-column: 1 / -1; }
+}
+
+/* Q-Leap : bande gestion de projet */
+.qleap-pm { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); }
+.qleap-pm-label {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--neo-mint);
+  margin-bottom: 8px;
+}
+.qleap-pm ul { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.qleap-pm li {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-head);
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(88,235,200,.3);
+}
+
+/* Q-Leap : volets compacts */
+.qleap-side {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface-color);
+}
+.qleap-side h4 { font-size: 16px; font-weight: 700; color: var(--heading-color); margin: 0 0 8px; }
+.qleap-side p { font-size: 13.5px; line-height: 1.6; color: var(--default-color); margin: 0 0 14px; flex-grow: 1; }
+.qleap-side .qleap-chips { padding-top: 12px; }
+.qleap-case .qleap-intro { max-width: 960px; }
+
+/* Compétences : capacités en avant, outils en retrait */
+.tools-list { max-width: 1000px; }
+.tools-row dd .cap {
+  color: var(--text-head);
+  border-color: rgba(88,180,255,.28);
+  background: rgba(88,180,255,.06);
+}
+.tools-row dd .tool {
+  font-size: 12px;
+  color: color-mix(in srgb, var(--default-color), transparent 18%);
+  border-style: dashed;
+}
+.tools-sep {
+  flex-basis: 100%;
+  height: 0;
+  margin: 4px 0 -2px;
+  font-size: 0;
+}
+@media (min-width: 641px) {
+  .tools-sep { flex-basis: auto; height: auto; margin: 0 2px 0 8px; font-size: 10.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: rgba(200,205,216,.7); align-self: center; }
+}
+
+/* Parcours : l'équipe et la méthode de chaque projet de jeu */
+.resume .resume-item p.resume-team {
+  display: inline-block;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--neo-violet);
+  background: color-mix(in srgb, var(--neo-violet), transparent 88%);
+  padding: 3px 10px;
+  border-radius: 8px;
+  margin: 2px 0 8px;
+}
+.resume .resume-item ul li strong { color: var(--text-head); }
+
+/* Témoignages : plus compacts, servent de preuve */
+.testimonials .section-title { padding-bottom: 30px; }
+.testimonial-card { padding: 24px 24px 20px; }
+.testimonial-text { font-size: 14px; line-height: 1.65; margin-bottom: 14px; }
+.testimonial-quote-icon { font-size: 22px; margin-bottom: 6px; }
