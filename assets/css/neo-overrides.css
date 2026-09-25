@@ -1731,3 +1731,51 @@ footer {
 .testimonial-card { padding: 24px 24px 20px; }
 .testimonial-text { font-size: 14px; line-height: 1.65; margin-bottom: 14px; }
 .testimonial-quote-icon { font-size: 22px; margin-bottom: 6px; }
+
+/* ============================================================
+   FINITION 2026-09 — preuves visuelles, repères, parcours
+============================================================ */
+/* Repères : trois chiffres de parcours dans À propos */
+.about-stats { grid-template-columns: repeat(3, 1fr); max-width: 860px; margin: 40px auto 0; }
+@media (max-width: 576px) { .about-stats { grid-template-columns: 1fr; } }
+/* Chiffres Q-Leap sous l'introduction */
+.qleap-case .qleap-stats { margin: 22px auto 44px; }
+
+/* Preuves visuelles des case studies : invisibles tant qu'aucune image n'est ajoutée */
+.case-proofs {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.case-proofs:empty,
+.case-proofs:not(:has(figure)) { display: none; }
+.case-proofs figure { margin: 0; }
+.case-proofs img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.case-proofs figcaption { font-size: 12px; margin-top: 6px; color: color-mix(in srgb, var(--default-color), transparent 15%); }
+
+/* Parcours : l'évolution vers la coordination se lit dans les couleurs */
+.career-path .is-creative { border-top-color: rgba(184,122,255,.45); }
+.career-path .is-creative::before { border-color: var(--neo-violet); }
+.career-path .career-now strong { font-size: 15.5px; color: #fff; }
+@media (max-width: 767px) {
+  .career-path .is-creative { border-left-color: rgba(184,122,255,.45); }
+}
+
+/* Projets perso : rôle et équipe sous l'étiquette */
+.project-kind small {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: rgba(255,255,255,.78);
+  margin-top: 1px;
+}
