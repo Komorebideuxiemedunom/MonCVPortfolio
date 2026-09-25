@@ -15,11 +15,15 @@
   const headerToggleBtn = document.querySelector('.header-toggle');
 
   function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
+    var open = document.querySelector('#header').classList.toggle('header-show');
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
+    headerToggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
   headerToggleBtn.addEventListener('click', headerToggle);
+  headerToggleBtn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); headerToggle(); }
+  });
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -91,7 +95,7 @@
   /**
    * Initiate Pure Counter
    */
-  new PureCounter();
+  if (typeof PureCounter !== 'undefined') new PureCounter();
 
   /**
    * Initiate glightbox — runs on load so it also picks up

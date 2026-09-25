@@ -224,3 +224,4 @@ section:last-child { margin-bottom: 0; }
 }
 .edu-title .sep { color: var(--muted); font-weight: 400; }
 .edu-row .exp-date { color: var(--green); }
+.exp-item ul li strong { color: var(--ink, #111); font-weight: 700; }

@@ -1317,3 +1317,311 @@ footer {
   .qleap-axis-num { font-size: 24px; }
   .qleap-cycle .flow-word { font-size: 12px; }
 }
+
+/* ============================================================
+   AUDIT 2026-09 — hero CTA, "En ce moment", preuves, outils,
+   case studies, parcours, projets perso, contact direct
+============================================================ */
+
+/* Contraste : textes secondaires un peu moins pâles (WCAG AA) */
+.hero-subtitle { color: rgba(255,255,255,.66) !important; }
+.hero-tagline { color: rgba(255,255,255,.72) !important; max-width: 580px; }
+.trust-bar-label { color: rgba(255,255,255,.58); }
+.trust-logo { color: rgba(255,255,255,.55); }
+
+/* Hero : deux appels à l'action, pas plus */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 26px;
+}
+.hero-cta .btn-cv { display: inline-flex; align-items: center; gap: 6px; padding: 13px 26px !important; }
+.btn-cv.btn-cv-solid {
+  background: linear-gradient(90deg, var(--neo-blue), var(--neo-violet)) !important;
+  border-color: transparent !important;
+  color: #06060F !important;
+}
+.btn-cv.btn-cv-solid:hover { color: #06060F !important; filter: brightness(1.08); }
+.hero .hero-flow .flow-arrow { font-size: 18px; }
+
+/* Barre de navigation : lien CV mis en évidence */
+.navmenu a.nav-cv { color: var(--neo-mint) !important; }
+
+/* En ce moment */
+.currently {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 14px;
+  margin: 0 0 26px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.currently-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--neo-mint);
+}
+.currently-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.currently-list li {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-head);
+  padding: 4px 11px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+
+/* Compétences : points + preuve */
+.services .service-item h3.title { font-size: 15px; color: var(--heading-color); }
+.service-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+.service-points li {
+  font-size: 11.5px;
+  color: var(--text);
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(255,255,255,.045);
+}
+.service-proof {
+  margin: 12px 0 0;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
+}
+.service-proof > span:first-child {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--neo-mint);
+  margin-bottom: 2px;
+}
+.service-proof a { color: var(--neo-blue); }
+
+/* Outils : liste compacte, en second plan */
+.tools-list {
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+}
+.tools-row {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 8px 20px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.tools-row dt {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--neo-violet);
+}
+.tools-row dd { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.tools-row dd span {
+  font-size: 13px;
+  color: var(--text);
+  padding: 3px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+@media (max-width: 640px) {
+  .tools-row { grid-template-columns: 1fr; }
+}
+
+/* Q-Leap : chiffres réels */
+.qleap-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 860px;
+  margin: -16px auto 40px;
+  padding: 0;
+  list-style: none;
+}
+.qleap-stats li {
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface-color);
+}
+.qleap-stats strong {
+  display: block;
+  font-family: var(--heading-font);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #fff, var(--neo-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.qleap-stats span { font-size: 13px; color: color-mix(in srgb, var(--default-color), transparent 10%); }
+.qleap-stats .is-target { border-style: dashed; border-color: color-mix(in srgb, var(--neo-mint), transparent 55%); }
+.qleap-stats .is-target strong { background: none; -webkit-text-fill-color: var(--neo-mint); color: var(--neo-mint); }
+@media (max-width: 640px) {
+  .qleap-stats { grid-template-columns: 1fr; }
+}
+
+/* Q-Leap : case studies */
+.qleap-block-note {
+  text-align: center;
+  font-size: 13.5px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: -10px 0 22px;
+}
+.case {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  padding: 24px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--neo-violet);
+  background: var(--surface-color);
+}
+.case-head h4 { font-size: 20px; font-weight: 700; color: var(--heading-color); margin: 0 0 4px; }
+.case-meta { font-size: 13px; color: color-mix(in srgb, var(--default-color), transparent 22%); margin: 0; }
+.case-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 20px;
+  margin: 0;
+}
+.case-steps dt {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--neo-blue);
+  margin-bottom: 4px;
+}
+.case-steps dd { font-size: 13.5px; line-height: 1.55; margin: 0; color: var(--default-color); }
+.case-kpi dt { color: var(--neo-mint); }
+.case-kpi dd strong { display: block; color: var(--neo-mint); font-size: 14px; }
+.case-kpi dd span { font-size: 12.5px; color: color-mix(in srgb, var(--default-color), transparent 20%); }
+@media (max-width: 991px) {
+  .case { grid-template-columns: 1fr; gap: 16px; }
+  .case-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+  .case { padding: 20px 18px; }
+  .case-steps { grid-template-columns: 1fr; }
+}
+
+/* Parcours : évolution du profil */
+.career-path {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  list-style: none;
+  margin: 0 0 44px;
+  padding: 0;
+  counter-reset: none;
+}
+.career-path li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 16px 18px 14px;
+  border-top: 2px solid rgba(88,180,255,.28);
+}
+.career-path li::before {
+  content: "";
+  position: absolute;
+  top: -6px; left: 18px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--neo-blue);
+}
+.career-path .career-now { border-top-color: var(--neo-mint); }
+.career-path .career-now::before { border-color: var(--neo-mint); background: var(--neo-mint); }
+.career-years { font-size: 12px; font-weight: 700; color: var(--neo-mint); }
+.career-path strong { font-size: 14.5px; color: var(--heading-color); line-height: 1.35; }
+.career-path li > span:last-child { font-size: 12.5px; color: color-mix(in srgb, var(--default-color), transparent 20%); }
+@media (max-width: 767px) {
+  .career-path { grid-template-columns: 1fr; margin-bottom: 32px; }
+  .career-path li { border-top: 0; border-left: 2px solid rgba(88,180,255,.28); padding: 4px 0 16px 20px; }
+  .career-path .career-now { border-left-color: var(--neo-mint); }
+  .career-path li::before { top: 6px; left: -6px; }
+}
+.resume-cv { text-align: center; margin: 36px 0 0; }
+
+/* Projets perso : nature du projet toujours visible */
+.portfolio .portfolio-content { position: relative; }
+.project-kind {
+  position: absolute;
+  top: 12px; left: 12px;
+  z-index: 3;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: rgba(6,6,15,.78);
+  border: 1px solid rgba(184,122,255,.4);
+}
+.portfolio .portfolio-content:focus-within .portfolio-info { opacity: 1; }
+
+/* Contact direct */
+.contact-direct { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.contact-direct a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface-color);
+  color: var(--text-head);
+  font-size: 14.5px;
+  word-break: break-word;
+  transition: border-color .25s ease, background .25s ease;
+}
+.contact-direct a:hover { border-color: var(--border-lit); background: var(--bg-lit); color: #fff; }
+.contact-direct a i { font-size: 20px; color: var(--neo-blue); flex-shrink: 0; }
+.contact-direct .contact-direct-main { border-color: rgba(88,180,255,.35); }
+.contact-direct-label {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--neo-mint);
+}
+.contact-location { margin: 14px 0 0; font-size: 13px; color: color-mix(in srgb, var(--default-color), transparent 15%); }
+.contact-form-intro { font-size: 14px; color: color-mix(in srgb, var(--default-color), transparent 10%); margin: 0 0 14px; }
+.footer .copyright a { color: var(--neo-blue); }
