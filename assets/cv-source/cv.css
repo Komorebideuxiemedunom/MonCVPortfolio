@@ -83,7 +83,7 @@ html, body {
 }
 
 /* ---------------- SECTIONS ---------------- */
-section { margin-bottom: 1.3mm; }
+section { margin-bottom: 0.8mm; }
 section:last-child { margin-bottom: 0; }
 
 .section-title {
