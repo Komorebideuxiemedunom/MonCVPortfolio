@@ -1779,3 +1779,10 @@ footer {
   color: rgba(255,255,255,.78);
   margin-top: 1px;
 }
+
+/* Liste rapide des autres apps iPhone, sous la grille du portfolio */
+.more-apps { margin-top: 40px; }
+.more-apps h3 { font-size: 1.15rem; margin-bottom: 12px; }
+.more-apps ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.more-apps li { line-height: 1.5; }
+.more-apps li strong { color: var(--heading-color); margin-right: 4px; }
