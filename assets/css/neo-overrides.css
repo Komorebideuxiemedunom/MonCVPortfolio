@@ -1787,17 +1787,6 @@ footer {
 .more-apps li { line-height: 1.5; }
 .more-apps li strong { color: var(--heading-color); margin-right: 4px; }
 
-/* Projets perso : logo de l'app sur la vignette */
-.portfolio .portfolio-content img.project-logo {
-  position: absolute;
-  right: 12px; bottom: 12px;
-  z-index: 2;
-  width: 56px; height: 56px;
-  padding: 0;
-  border-radius: 13px;
-  object-fit: cover;
-  background: transparent !important;
-  box-shadow: 0 6px 18px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.12);
-  transform: none;
-}
-.portfolio .portfolio-content:hover img.project-logo { transform: none; }
+
+/* Projets perso : logo seul de l'app, dégagé de l'étiquette du projet */
+.portfolio .portfolio-content img.project-logo { padding: 52px 18px 8px; }
