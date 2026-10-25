@@ -38,24 +38,16 @@
     ]
   }
   </script>
-
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+  <link rel="preload" href="assets/fonts/gloock.woff2" as="font" type="font/woff2" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link href="assets/css/neo-overrides.css?v=20261022b" rel="stylesheet">
+  <link href="assets/css/site.css?v=20261025" rel="stylesheet">
   <!-- Theme fixe: mode sombre (DA neonikala) -->
 </head>
 
 <body class="portfolio-details-page">
-  <div id="neo-cursor"></div>
-  <div id="neo-cursor-ring"></div>
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
@@ -100,11 +92,11 @@
     </div>
 
     <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
 
         <a href="index.html#portfolio" class="back-to-portfolio"><i class="bi bi-arrow-left"></i> <span data-i18n="pd.back">Retour au portfolio</span></a>
 
-        <div class="project-header" data-aos="fade-up">
+        <div class="project-header">
           <div class="project-meta">
             <span class="badge-category" data-i18n="pd.cat.apps">Apps &amp; outils</span>
             <span class="badge-date" data-i18n="p11.date">Octobre 2026</span>
@@ -115,7 +107,7 @@
 
         <div class="row justify-content-between gy-4">
 
-          <div class="col-lg-8" data-aos="fade-up">
+          <div class="col-lg-8">
             <div class="portfolio-details-slider init-swiper">
               <script type="application/json" class="swiper-config">
                 {
@@ -185,7 +177,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4">
             <div class="info-sidebar">
               <div class="info-card">
                 <h3 data-i18n="pd.info">Informations</h3>
@@ -232,7 +224,6 @@
   <div id="preloader"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
@@ -240,8 +231,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/neo-effects.js"></script>
-  <script src="assets/js/fluid-trail.js"></script>
 </body>
 </html>
 

@@ -51,20 +51,14 @@
   </script>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+  <link rel="preload" href="assets/fonts/gloock.woff2" as="font" type="font/woff2" crossorigin>
   <!-- Vendor CSS Files -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <!-- Neonikala visual overrides — couleurs neon, glass, curseur, effets -->
-  <link href="assets/css/neo-overrides.css?v=20261022b" rel="stylesheet">
+  <link href="assets/css/site.css?v=20261025" rel="stylesheet">
 
   <!-- Theme fixe: mode sombre (DA neonikala) -->
 </head>
@@ -72,8 +66,6 @@
 <body class="index-page">
 
   <!-- Neo cursor elements -->
-  <div id="neo-cursor"></div>
-  <div id="neo-cursor-ring"></div>
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-controls="navmenu"></i>
@@ -116,42 +108,27 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <div class="area">
-        <ul class="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h1 class="gooey-reveal">DANSAC Lucas</h1>
-        <p class="hero-subtitle gooey-reveal" data-i18n="hero.subtitle">Chargé de communication &amp; marketing chez Q-Leap · Luxembourg</p>
-        <div class="hero-flow gooey-reveal" data-aos="fade-up" data-aos-delay="150" aria-label="Communication, Marketing, Coordination de projets, Digital">
+      <div class="container">
+        <h1 >DANSAC Lucas</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Chargé de communication &amp; marketing chez Q-Leap · Luxembourg</p>
+        <div class="hero-flow" aria-label="Communication, Marketing, Coordination de projets, Digital">
           <span class="flow-word">Communication</span><i class="bi bi-dot flow-arrow" aria-hidden="true"></i>
           <span class="flow-word">Marketing</span><i class="bi bi-dot flow-arrow" aria-hidden="true"></i>
           <span class="flow-word" data-i18n="flow.coord">Coordination de projets</span><i class="bi bi-dot flow-arrow" aria-hidden="true"></i>
           <span class="flow-word flow-word-last">Digital</span>
         </div>
-        <p class="hero-tagline gooey-reveal" data-i18n="hero.tagline">Je fais avancer des projets à l'intersection du marketing, de la communication et du digital : je les cadre, je coordonne les gens autour, et je produis moi-même une partie des livrables.</p>
-        <div class="hero-cta" data-aos="fade-up" data-aos-delay="200">
+        <p class="hero-tagline" data-i18n="hero.tagline">Je fais avancer des projets à l'intersection du marketing, de la communication et du digital : je les cadre, je coordonne les gens autour, et je produis moi-même une partie des livrables.</p>
+        <div class="hero-cta">
           <a href="#qleap" class="btn-cv btn-cv-solid"><span data-i18n="hero.cta.work">Voir mon travail</span> <i class="bi bi-arrow-down-short" aria-hidden="true"></i></a>
           <a href="assets/CV_Lucas_Dansac_blanc.pdf" class="btn-cv" download="CV_Lucas_Dansac.pdf"><i class="bi bi-download" aria-hidden="true"></i> <span data-i18n="hero.cta.cv">Télécharger le CV</span></a>
         </div>
         <p class="hero-contact"><a href="#contact" data-i18n="hero.cta.contact">ou me contacter directement</a></p>
         <div class="hero-badges">
-          <span class="status-badge gooey-reveal" data-aos="fade-up" data-aos-delay="250">
+          <span class="status-badge">
             <span class="status-badge-dot"></span>
             <span data-i18n="about.badge">En poste · ouvert aux opportunités</span>
           </span>
-          <span class="status-badge status-badge-secondary gooey-reveal" data-aos="fade-up" data-aos-delay="300">
+          <span class="status-badge status-badge-secondary">
             <i class="bi bi-clock-history"></i>
             <span data-i18n="hero.response">Réponds sous 24-48h</span>
           </span>
@@ -166,7 +143,7 @@
 
     <!-- Trust Bar Section -->
     <section id="trust" class="trust-bar section">
-      <div class="container" data-aos="fade-up">
+      <div class="container">
         <!-- En ce moment : une entrée par sujet en cours, à mettre à jour au fil des missions -->
         <div class="currently">
           <span class="currently-label"><span class="status-badge-dot"></span><span data-i18n="currently.label">En ce moment</span></span>
@@ -192,12 +169,12 @@
     <section id="about" class="about section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="gooey-reveal" data-i18n="about.title">A Propos</h2>
-        <p class="gooey-reveal" data-i18n="about.subtitle">Master en management de la création numérique · Plus de 4 ans à coordonner des projets, à communiquer et à produire les livrables.</p>
+      <div class="container section-title">
+        <h2  data-i18n="about.title">A Propos</h2>
+        <p  data-i18n="about.subtitle">Master en management de la création numérique · Plus de 4 ans à coordonner des projets, à communiquer et à produire les livrables.</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
 
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
@@ -231,7 +208,7 @@
           </div>
         </div>
 
-        <ul class="qleap-stats about-stats" data-aos="fade-up" aria-label="Quelques repères">
+        <ul class="qleap-stats about-stats" aria-label="Quelques repères">
           <li><strong>4+</strong><span data-i18n="stats.years">ans en gestion de projet, création et communication</span></li>
           <li><strong>12</strong><span data-i18n="stats.team">personnes dans la plus grande équipe que j'ai coordonnée</span></li>
           <li><strong>5</strong><span data-i18n="stats.games">projets de jeu, dont 4 en tant que chef de projet</span></li>
@@ -245,19 +222,19 @@
     <section id="qleap" class="qleap-case section light-background">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="gooey-reveal" data-i18n="qleap.title">Expérience</h2>
-        <p class="gooey-reveal" data-i18n="qleap.subtitle">Q-Leap, depuis juin 2026. C'est là que tout ce que je sais faire se retrouve dans un même poste.</p>
+      <div class="container section-title">
+        <h2  data-i18n="qleap.title">Expérience</h2>
+        <p  data-i18n="qleap.subtitle">Q-Leap, depuis juin 2026. C'est là que tout ce que je sais faire se retrouve dans un même poste.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="qleap-intro" data-aos="fade-up" data-aos-delay="100">
+        <div class="qleap-intro">
           <div class="qleap-intro-meta">
             <span class="service-tag">Q-Leap S.A · Luxembourg</span>
             <span class="qleap-status"><span class="status-badge-dot"></span><span data-i18n="qleap.status">En cours · 2026</span></span>
           </div>
-          <h3 class="qleap-heading">Q-Leap — Communication, Marketing &amp; Project Coordination</h3>
+          <h3 class="qleap-heading">Q-Leap · Communication, Marketing &amp; Project Coordination</h3>
           <p class="qleap-lead" data-i18n="qleap.intro1">Je travaille entre communication, marketing, événementiel et outils digitaux, de la stratégie et du planning jusqu'à la production et au suivi.</p>
           <p class="qleap-lead" data-i18n="qleap.intro2">Mon rôle consiste à transformer des besoins parfois très différents en actions concrètes.</p>
           <div class="qleap-pm">
@@ -272,17 +249,17 @@
           </div>
         </div>
 
-        <ul class="qleap-stats" data-aos="fade-up" aria-label="Q-Leap en chiffres">
+        <ul class="qleap-stats" aria-label="Q-Leap en chiffres">
           <li class="is-target"><strong>400</strong><span data-i18n="qleap.stat.lste">inscriptions : objectif LSTE 2026</span></li>
           <li><strong>4</strong><span data-i18n="qleap.stat.sites">sites web coordonnés en migration et refonte</span></li>
           <li><strong>2</strong><span data-i18n="qleap.stat.li">pages LinkedIn gérées</span></li>
         </ul>
 
         <!-- Case studies -->
-        <h3 class="qleap-block-title" data-aos="fade-up">Case studies</h3>
-        <p class="qleap-block-note" data-aos="fade-up" data-i18n="qleap.projects.note">Ces trois projets sont en cours : les objectifs sont affichés, les résultats viendront à leur clôture.</p>
+        <h3 class="qleap-block-title">Case studies</h3>
+        <p class="qleap-block-note" data-i18n="qleap.projects.note">Ces trois projets sont en cours : les objectifs sont affichés, les résultats viendront à leur clôture.</p>
 
-        <article class="case" data-aos="fade-up">
+        <article class="case">
           <header class="case-head">
             <span class="qleap-project-status" data-i18n="qleap.inprogress">En cours · 2026</span>
             <h4>LSTE 2026</h4>
@@ -307,7 +284,7 @@
           --></div>
         </article>
 
-        <article class="case" data-aos="fade-up">
+        <article class="case">
           <header class="case-head">
             <span class="qleap-project-status" data-i18n="qleap.inprogress">En cours · 2026</span>
             <h4>Q-Guard</h4>
@@ -332,7 +309,7 @@
           --></div>
         </article>
 
-        <article class="case" data-aos="fade-up">
+        <article class="case">
           <header class="case-head">
             <span class="qleap-project-status" data-i18n="qleap.inprogress">En cours · 2026</span>
             <h4>Q-Bot</h4>
@@ -356,10 +333,10 @@
         </article>
 
         <!-- Autres volets du rôle -->
-        <h3 class="qleap-block-title" data-aos="fade-up" data-i18n="qleap.more">Et aussi</h3>
+        <h3 class="qleap-block-title" data-i18n="qleap.more">Et aussi</h3>
         <div class="row gy-4">
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4">
             <div class="qleap-side">
               <h4>CRM &amp; Digital Operations</h4>
               <p>Je consolide les contacts entre Odoo et Boond, je nettoie les doublons et je structure les listes de diffusion qui servent aux campagnes e-mailing.</p>
@@ -367,7 +344,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4">
             <div class="qleap-side">
               <h4>Market Intelligence &amp; PR</h4>
               <p>Je garde un œil sur l'écosystème IT et formation au Luxembourg (Silicon, IT Nation, INFPC, Lifelong Learning), je fais le benchmark des formations et je repère les opportunités de visibilité et de presse.</p>
@@ -375,7 +352,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4">
             <div class="qleap-side">
               <h4>Event Representation &amp; Recruitment</h4>
               <p>Sur les salons comme le Jobdag RTL, je représente Q-Leap sur le stand, j'échange avec les candidats et je mène des entretiens.</p>
@@ -386,7 +363,7 @@
         </div>
 
         <!-- How I work -->
-        <div class="qleap-how" data-aos="fade-up">
+        <div class="qleap-how">
           <h3 class="qleap-block-title" data-i18n="qleap.how">Ma façon de travailler</h3>
           <div class="hero-flow qleap-cycle" aria-label="Strategy, Coordination, Production, Delivery, Measurement">
             <span class="flow-word">Strategy</span><i class="bi bi-chevron-right flow-arrow" aria-hidden="true"></i>
@@ -406,16 +383,16 @@
     <section id="services" class="services section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="gooey-reveal" data-i18n="services.title">Ce que j'apporte</h2>
-        <p class="gooey-reveal" data-i18n="services.subtitle">Pas une liste de logiciels : les problèmes que je sais résoudre sur un projet.</p>
+      <div class="container section-title">
+        <h2  data-i18n="services.title">Ce que j'apporte</h2>
+        <p  data-i18n="services.subtitle">Pas une liste de logiciels : les problèmes que je sais résoudre sur un projet.</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
 
         <div class="row gy-4 justify-content-center">
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-diagram-3" aria-hidden="true"></i></div>
               <div>
@@ -427,7 +404,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-megaphone" aria-hidden="true"></i></div>
               <div>
@@ -439,7 +416,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-bullseye" aria-hidden="true"></i></div>
               <div>
@@ -451,7 +428,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-palette" aria-hidden="true"></i></div>
               <div>
@@ -463,7 +440,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-code-slash" aria-hidden="true"></i></div>
               <div>
@@ -485,12 +462,12 @@
     <section id="skills" class="skills section light-background">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="gooey-reveal" data-i18n="skills.title">Compétences</h2>
-        <p class="gooey-reveal" data-i18n="skills.subtitle">Ce que je sais faire, puis les outils avec lesquels je le fais. Mes expériences au-dessus servent de preuve.</p>
+      <div class="container section-title">
+        <h2  data-i18n="skills.title">Compétences</h2>
+        <p  data-i18n="skills.subtitle">Ce que je sais faire, puis les outils avec lesquels je le fais. Mes expériences au-dessus servent de preuve.</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
         <dl class="tools-list">
           <div class="tools-row">
             <dt data-i18n="skills.d.pm">Gestion de projet</dt>
@@ -541,14 +518,14 @@
     <section id="resume" class="resume section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="gooey-reveal" data-i18n="resume.title">Parcours</h2>
-        <p class="gooey-reveal" data-i18n="resume.subtitle">Formation, expériences et projets, dans l'ordre où ils ont construit mon profil.</p>
+      <div class="container section-title">
+        <h2  data-i18n="resume.title">Parcours</h2>
+        <p  data-i18n="resume.subtitle">Formation, expériences et projets, dans l'ordre où ils ont construit mon profil.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <ol class="career-path" data-aos="fade-up" aria-label="Évolution du profil">
+        <ol class="career-path" aria-label="Évolution du profil">
           <li class="is-creative"><span class="career-years">2018 – 2021</span><strong data-i18n="path.1.title">Communication &amp; création</strong><span data-i18n="path.1.desc">Licence info-com, premiers supports et e-learning</span></li>
           <li class="is-project"><span class="career-years">2021 – 2023</span><strong data-i18n="path.2.title">Pilotage de projets créatifs</strong><span data-i18n="path.2.desc">Master, jeux vidéo, UX/UI, équipes de 3 à 12</span></li>
           <li class="is-project"><span class="career-years">2023 – 2025</span><strong data-i18n="path.3.title">Coordination en entreprise</strong><span data-i18n="path.3.desc">Foyer Assurances, production audiovisuelle</span></li>
@@ -557,7 +534,7 @@
 
         <div class="row">
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
             <h3 class="resume-title" data-i18n="resume.exp">Expérience professionnelle</h3>
 
             <div class="resume-item">
@@ -629,7 +606,7 @@
 
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6">
             <h3 class="resume-title" data-i18n="resume.games">Projets de jeu : ma première gestion de projet</h3>
             <p class="resume-throughline" data-i18n="resume.games.note">Hors entreprise, mais c'est là que j'ai appris à piloter une équipe : tenir un backlog, organiser des sprints, faire bosser ensemble des profils très différents, et présenter le projet à la fin.</p>
 
@@ -738,7 +715,7 @@
 
         </div>
 
-        <p class="resume-cv" data-aos="fade-up"><a href="assets/CV_Lucas_Dansac_blanc.pdf" target="_blank" rel="noopener" class="btn-cv"><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> <span data-i18n="resume.cv">Le CV complet en PDF</span></a></p>
+        <p class="resume-cv"><a href="assets/CV_Lucas_Dansac_blanc.pdf" target="_blank" rel="noopener" class="btn-cv"><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> <span data-i18n="resume.cv">Le CV complet en PDF</span></a></p>
 
       </div>
 
@@ -748,12 +725,12 @@
     <section id="testimonials" class="testimonials section light-background">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="gooey-reveal" data-i18n="testimonials.title">Ce qu'on dit de moi</h2>
-        <p class="gooey-reveal" data-i18n="testimonials.subtitle">Deux personnes avec qui j'ai travaillé, en stage et en production.</p>
+      <div class="container section-title">
+        <h2  data-i18n="testimonials.title">Ce qu'on dit de moi</h2>
+        <p  data-i18n="testimonials.subtitle">Deux personnes avec qui j'ai travaillé, en stage et en production.</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
         <div class="row gy-4">
 
           <div class="col-lg-6">
@@ -787,23 +764,23 @@
     <section id="portfolio" class="portfolio section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="gooey-reveal" data-i18n="portfolio.title">Projets personnels &amp; créatifs</h2>
-        <p class="gooey-reveal" data-i18n="portfolio.subtitle">Apps, jeux, game jams et design, en études et sur mon temps libre. C'est là que j'expérimente, et là que j'ai appris à piloter une équipe.</p>
+      <div class="container section-title">
+        <h2  data-i18n="portfolio.title">Projets personnels &amp; créatifs</h2>
+        <p  data-i18n="portfolio.subtitle">Apps, jeux, game jams et design, en études et sur mon temps libre. C'est là que j'expérimente, et là que j'ai appris à piloter une équipe.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+          <ul class="portfolio-filters isotope-filters">
             <li data-filter="*" class="filter-active" data-i18n="portfolio.filter.all">Tous</li>
             <li data-filter=".filter-dev" data-i18n="portfolio.filter.apps">Apps &amp; outils</li>
             <li data-filter=".filter-app" data-i18n="portfolio.filter.games">Jeux vidéos</li>
             <li data-filter=".filter-design" data-i18n="portfolio.filter.design">Design</li>
           </ul><!-- End Portfolio Filters -->
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-4 isotope-container">
 
             <div class="col-lg-4 col-md-6 isotope-item filter-dev">
               <div class="portfolio-content h-100">
@@ -950,7 +927,7 @@
 
           </div><!-- End Portfolio Container -->
 
-          <div class="more-apps" data-aos="fade-up">
+          <div class="more-apps">
             <h3 data-i18n="portfolio.more.title">Et aussi</h3>
             <ul>
               <li><strong>Hop</strong> <span data-i18n="portfolio.more.hop">Envoyer photos et fichiers de l'iPhone vers un PC ou un Android, sans rien installer en face. En vérification chez Apple.</span></li>
@@ -974,16 +951,16 @@
     <section id="passions" class="services section passions-section light-background">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="gooey-reveal" data-i18n="passions.title">Passions</h2>
-        <p class="gooey-reveal" data-i18n="passions.subtitle">Ce qui me passionne en dehors du travail.</p>
+      <div class="container section-title">
+        <h2  data-i18n="passions.title">Passions</h2>
+        <p  data-i18n="passions.subtitle">Ce qui me passionne en dehors du travail.</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
 
         <div class="row gy-4">
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-controller"></i></div>
               <div>
@@ -993,7 +970,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-tv"></i></div>
               <div>
@@ -1003,7 +980,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-book"></i></div>
               <div>
@@ -1024,12 +1001,12 @@
     <section id="contact" class="contact section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="gooey-reveal" data-i18n="contact.title">Me contacter</h2>
-        <p class="gooey-reveal" data-i18n="contact.subtitle">Le plus rapide : un e-mail ou un message LinkedIn. Je réponds sous 24 à 48 h.</p>
+      <div class="container section-title">
+        <h2  data-i18n="contact.title">Me contacter</h2>
+        <p  data-i18n="contact.subtitle">Le plus rapide : un e-mail ou un message LinkedIn. Je réponds sous 24 à 48 h.</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
 
         <div class="row gy-4">
 
@@ -1072,7 +1049,7 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="https://formsubmit.co/lucas.dansac@gmail.com" method="POST" data-aos="fade-up" data-aos-delay="200">
+            <form action="https://formsubmit.co/lucas.dansac@gmail.com" method="POST">
               <!-- FormSubmit configuration -->
               <input type="hidden" name="_subject" value="Contact depuis le portfolio CV">
               <input type="hidden" name="_next" value="https://lucasdansac.com/#contact">
@@ -1127,7 +1104,6 @@
 
   <!-- Vendor JS Files -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
@@ -1136,10 +1112,6 @@
   <script src="assets/js/i18n.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <!-- Neonikala effects: cursor, gooey reveal, reading progress -->
-  <script src="assets/js/neo-effects.js"></script>
-  <!-- WebGL Navier-Stokes fluid trail (neon) -->
-  <script src="assets/js/fluid-trail.js"></script>
 
 </body>
 
