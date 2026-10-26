@@ -7,6 +7,26 @@
   var prefersReduced = function () { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; };
 
   /* ====================================================
+     0. MANIFESTE : chaque morceau s'allume à mesure qu'on lit
+  ==================================================== */
+  function initManifesto() {
+    var box = document.querySelector('.manifesto-text');
+    if (!box || prefersReduced()) return;
+    var parts = box.querySelectorAll('span');
+    box.classList.add('is-armed');
+    function update() {
+      var r = box.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var prog = (vh * 0.8 - r.top) / (r.height + vh * 0.3);
+      var lit = Math.round(Math.max(0, Math.min(1, prog)) * parts.length);
+      parts.forEach(function (p, i) { p.classList.toggle('is-lit', i < lit); });
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
+  /* ====================================================
      1. READING PROGRESS
   ==================================================== */
   function initReadingProgress() {
@@ -112,6 +132,7 @@
      INIT
   ==================================================== */
   function init() {
+    initManifesto();
     initReadingProgress();
     initContactForm();
   }

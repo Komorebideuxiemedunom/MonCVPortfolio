@@ -1,0 +1,516 @@
+/* ============================================================
+   SIGNAL : mise en page du site, inspirée de landonorris.com
+   (site de l'année Awwwards 2025) mais avec l'identité de Lucas.
+   Deux couleurs : bleu nuit #06060F et bleu néon #58B4FF.
+   Une seule famille : Schibsted Grotesk, de 300 à 900.
+   Capitales immenses, coins coupés, pied de page à onglet.
+   ============================================================ */
+
+@font-face {
+  font-family: "Schibsted Grotesk";
+  src: url("../fonts/schibsted-grotesk.woff2") format("woff2");
+  font-weight: 400 900;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Schibsted Grotesk";
+  src: url("../fonts/schibsted-grotesk-ext.woff2") format("woff2");
+  font-weight: 400 900;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  --default-font: "Schibsted Grotesk", system-ui, sans-serif;
+  --heading-font: "Schibsted Grotesk", system-ui, sans-serif;
+  --nav-font:     "Schibsted Grotesk", system-ui, sans-serif;
+
+  /* Deux couleurs : les anciens signaux secondaires rejoignent le bleu ou le blanc cassé */
+  --neo-violet: #58B4FF;
+  --neo-mint:   #EEF0F6;
+  --bar-h: 84px;
+  --cut: 48px;
+}
+
+html { scroll-padding-top: var(--bar-h); }
+body { font-family: var(--default-font); }
+
+/* Coin coupé, la signature des cartes */
+.hero-photo img,
+.portfolio .portfolio-content {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, var(--cut) 100%, 0 calc(100% - var(--cut)));
+}
+
+/* ============================================================
+   BARRE DU HAUT
+============================================================ */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 9996; /* sous le menu (9997), qui porte le bouton menu */
+  height: var(--bar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 96px 0 24px;
+  background: #06060F;
+  border-bottom: 1px solid var(--border);
+}
+.topbar-logo {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  line-height: .92;
+  text-transform: uppercase;
+  color: var(--text-head);
+}
+.topbar-logo span:first-child { font-weight: 400; }
+.topbar-logo span:last-child { font-weight: 900; }
+.topbar-logo:hover { color: var(--neo-blue); }
+.topbar-actions { display: flex; align-items: center; gap: 12px; }
+.topbar .lang-switch { display: flex; gap: 4px; }
+.topbar .lang-opt {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font: 700 13px/1 var(--default-font);
+  padding: 10px 10px;
+}
+.topbar .lang-opt:hover { color: var(--text-head); border-color: var(--text-muted); }
+.topbar .lang-opt.active { color: var(--neo-blue) !important; border-color: var(--neo-blue); background: none !important; }
+.topbar-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: var(--neo-blue);
+  color: #06060F;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.topbar-cv:hover { background: var(--text-head); color: #06060F; }
+
+@media (min-width: 576px) { .header .nav-controls-row { display: none !important; } }
+
+/* Bouton menu : carré blanc cassé, posé dans la barre */
+.header .header-toggle {
+  display: flex !important;
+  top: 18px; right: 24px;
+  width: 48px; height: 48px;
+  border-radius: 8px !important;
+  background: var(--text-head) !important;
+  border: 0 !important;
+  color: #06060F !important;
+  font-size: 24px;
+}
+.header .header-toggle:hover { background: var(--neo-blue) !important; }
+
+/* ============================================================
+   MENU PLEIN ÉCRAN (l'ancienne barre latérale)
+============================================================ */
+.header {
+  left: -100% !important;
+  width: 100% !important;
+  padding: calc(var(--bar-h) + 32px) 24px 40px !important;
+  background: #06060F !important;
+  border: 0 !important;
+  justify-content: center;
+  overflow-y: auto;
+  z-index: 9997 !important;
+}
+.header.header-show { left: 0 !important; }
+.header .profile-img,
+.header .logo,
+.header .navmenu .navicon { display: none !important; }
+.header ~ main,
+.header ~ #footer { margin-left: 0 !important; }
+.header .navmenu { order: 1; }
+.header .social-links { order: 2; margin: 32px 0 0; }
+.header .navmenu ul { padding: 0; text-align: center; }
+.header .navmenu a,
+.header .navmenu a:focus {
+  justify-content: center;
+  padding: 2px 0 !important;
+  border: 0 !important;
+  background: none !important;
+  font-size: clamp(36px, 7vw, 84px);
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--text-head) !important;
+}
+.header .navmenu a:hover,
+.header .navmenu a.active { color: var(--neo-blue) !important; }
+.header .navmenu a.nav-cv { color: var(--neo-blue) !important; font-size: clamp(22px, 3vw, 32px); margin-top: 16px; }
+
+main.main { padding-top: var(--bar-h); }
+
+/* ============================================================
+   BOUTONS : pleins, gras, sans espacement de lettres
+============================================================ */
+.btn-cv,
+.contact form button[type=submit],
+.btn-project-link,
+.back-to-portfolio {
+  font-family: var(--default-font) !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  border-radius: 8px !important;
+}
+.btn-cv { padding: 14px 22px !important; }
+.btn-cv:hover { background: var(--neo-blue) !important; color: #06060F !important; box-shadow: none !important; }
+.btn-cv.btn-cv-solid,
+.contact form button[type=submit] {
+  background: var(--neo-blue) !important;
+  border-color: var(--neo-blue) !important;
+  color: #06060F !important;
+}
+.btn-cv.btn-cv-solid:hover,
+.contact form button[type=submit]:hover {
+  background: var(--text-head) !important;
+  border-color: var(--text-head) !important;
+  color: #06060F !important;
+  filter: none;
+  box-shadow: none !important;
+}
+
+/* ============================================================
+   HERO : le nom en capitales immenses, la photo au coin coupé
+============================================================ */
+.hero {
+  min-height: 0;
+  padding: 48px 0 96px;
+  display: block;
+  background: #06060F;
+}
+.hero:before { display: none; }
+.hero .container { text-align: left; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: 48px 64px;
+  align-items: start;
+}
+.hero h1.hero-name {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: clamp(64px, 14vw, 216px);
+  line-height: .84;
+  font-weight: 900;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+  color: var(--text-head);
+  text-shadow: none;
+}
+.hero-name span:first-child { font-weight: 400; }
+.hero-name span:last-child {
+  align-self: flex-end;
+  color: var(--neo-blue);
+  text-shadow: 0 0 2px rgba(88,180,255,.5), 0 0 36px rgba(88,180,255,.35);
+}
+.hero .hero-subtitle {
+  margin: 0 !important;
+  max-width: 560px;
+  font-size: clamp(24px, 2.4vw, 34px) !important;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+  color: var(--text-head) !important;
+}
+.hero p span { border: 0; padding: 0; }
+.hero .hero-tagline {
+  margin: 0 !important;
+  max-width: 560px;
+  font-size: clamp(20px, 1.8vw, 26px) !important;
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--text-head) !important;
+}
+.hero .hero-cta { justify-content: flex-start; margin-top: 32px; }
+.hero .hero-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 28px 0 0;
+  font-size: 15px;
+  letter-spacing: 0;
+  color: var(--text);
+}
+.hero .hero-status .status-badge-dot { background: var(--neo-blue) !important; box-shadow: 0 0 6px 1px rgba(88,180,255,.6) !important; border-radius: 50%; }
+.hero-status-sep { color: var(--text-muted); }
+.hero-photo { margin: 0; }
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-photo figcaption {
+  margin-top: 12px;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--text-muted);
+}
+@media (max-width: 991px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero-photo { max-width: 420px; }
+}
+
+/* ============================================================
+   MANIFESTE : la phrase s'allume au fil de la lecture
+============================================================ */
+.manifesto { padding: 120px 0 140px; border-top: 1px solid var(--border); }
+.manifesto-text {
+  margin: 0;
+  font-size: clamp(34px, 5.4vw, 88px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-head);
+}
+.manifesto-text .hl { color: var(--neo-blue); }
+.manifesto-text.is-armed span { color: rgba(238,240,246,.16); transition: color .45s ease, text-shadow .45s ease; }
+.manifesto-text.is-armed span.is-lit { color: var(--text-head); }
+.manifesto-text.is-armed span.hl.is-lit { color: var(--neo-blue); text-shadow: 0 0 28px rgba(88,180,255,.4); }
+
+/* ============================================================
+   TITRES DE SECTION : grand titre à gauche, texte à droite
+============================================================ */
+.section-title {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 16px 48px;
+  align-items: end;
+  padding-bottom: 64px;
+}
+.section-title h2 {
+  margin: 0;
+  padding: 0;
+  font-size: clamp(44px, 6.5vw, 104px);
+  line-height: .88;
+  font-weight: 900;
+  letter-spacing: -.03em;
+  text-transform: uppercase;
+  color: var(--text-head);
+}
+.section-title h2::after { display: none !important; }
+.section-title p {
+  max-width: 440px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text);
+}
+@media (max-width: 767px) {
+  .section-title { grid-template-columns: 1fr; padding-bottom: 40px; }
+}
+
+/* Titres internes un cran plus affirmés */
+.qleap-block-title,
+.resume .resume-title,
+.more-apps h3 {
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  letter-spacing: -.01em !important;
+}
+
+/* ============================================================
+   PROJETS PERSO : coin coupé, légende en bas à droite
+============================================================ */
+.portfolio .portfolio-content {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: #f0f0f7 !important;
+}
+.portfolio .portfolio-content:hover { box-shadow: none !important; }
+.portfolio .portfolio-content .portfolio-info {
+  opacity: 1 !important;
+  inset: auto 0 0 0 !important;
+  padding: 14px 18px !important;
+  background: none !important;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.portfolio .portfolio-content .portfolio-info h4 {
+  margin: 0;
+  font-size: 13px !important;
+  font-weight: 800;
+  color: #1C5F99 !important;
+}
+.portfolio .portfolio-content .portfolio-info p {
+  margin: 0;
+  font-size: 15px !important;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #06060F !important;
+}
+.portfolio .portfolio-content .portfolio-info .preview-link,
+.portfolio .portfolio-content .portfolio-info .details-link {
+  position: static !important;
+  order: -1;
+  color: #06060F !important;
+  font-size: 22px !important;
+  line-height: 1;
+}
+.portfolio .portfolio-content .portfolio-info .preview-link:hover,
+.portfolio .portfolio-content .portfolio-info .details-link:hover { color: #1C5F99 !important; }
+.portfolio .portfolio-content .portfolio-info .preview-link { order: -2; }
+.portfolio .portfolio-filters li { font-weight: 700; border-radius: 8px !important; }
+
+/* Passions : titres en capitales */
+.passions-list h3 { font-weight: 900; text-transform: uppercase; color: var(--neo-blue); }
+
+/* ============================================================
+   PIED DE PAGE : cadre néon, carte sombre avec onglet
+============================================================ */
+.footer {
+  margin: 0 !important;
+  padding: 64px 24px 16px !important;
+  background: var(--neo-blue) !important;
+  border: 0 !important;
+  color: #06060F;
+}
+.footer-card {
+  position: relative;
+  padding: 96px 32px 72px;
+  border-radius: 20px;
+  background: #06060F;
+  text-align: center;
+}
+.footer-card::before {
+  content: "";
+  position: absolute;
+  top: -32px; left: 50%;
+  width: min(360px, 50%);
+  height: 33px;
+  transform: translateX(-50%);
+  background: #06060F;
+  border-radius: 20px 20px 0 0;
+}
+.footer-statement {
+  margin: 0 0 72px;
+  font-size: clamp(40px, 7vw, 108px);
+  line-height: .9;
+  font-weight: 900;
+  letter-spacing: -.03em;
+  text-transform: uppercase;
+  color: var(--text-head);
+}
+.footer-statement .hl { color: var(--neo-blue); text-shadow: 0 0 28px rgba(88,180,255,.35); }
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px 32px;
+  align-items: center;
+}
+.footer-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.footer-cols ul { list-style: none; margin: 0; padding: 0; }
+.footer-cols li a {
+  font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--text-head);
+}
+.footer-cols li a:hover { color: var(--neo-blue); }
+.footer-mail .btn-cv { font-size: 16px !important; }
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px 4px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #06060F;
+}
+@media (max-width: 767px) {
+  .footer { padding: 48px 12px 12px !important; }
+  .footer-card { padding: 72px 20px 48px; }
+  .footer-cols { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   PAGES PROJET
+============================================================ */
+.project-header h1 {
+  font-size: clamp(48px, 8vw, 128px) !important;
+  line-height: .88 !important;
+  font-weight: 900 !important;
+  letter-spacing: -.03em !important;
+  text-transform: uppercase;
+}
+.page-title { padding-top: 24px; }
+
+/* ============================================================
+   MOBILE : barre plus compacte
+============================================================ */
+@media (max-width: 575px) {
+  :root { --bar-h: 72px; --cut: 32px; }
+  .topbar { padding: 0 76px 0 16px; }
+  .topbar-logo { font-size: 16px; }
+  .topbar .lang-switch { display: none; }
+  .header .nav-controls-row { display: flex !important; justify-content: center; margin-top: 24px; }
+  .topbar-cv { height: 40px; padding: 0 14px; font-size: 14px; }
+  .header .header-toggle { top: 16px; right: 16px; width: 40px; height: 40px; font-size: 20px; }
+}
+
+/* Projets perso : légendes en texte simple, sans pastille */
+.portfolio .portfolio-content .portfolio-info h4,
+.portfolio .portfolio-content .portfolio-info p { position: static !important; text-shadow: none !important; }
+.portfolio .portfolio-content .portfolio-info p { margin-right: auto !important; padding-left: var(--cut); }
+.project-kind {
+  top: 14px !important; left: 18px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+  color: #06060F !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  letter-spacing: .02em !important;
+}
+.project-kind small { color: #3A3D4A !important; text-transform: none; font-weight: 600; }
+.portfolio .portfolio-filters li {
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+/* À propos : la photo est déjà dans le hero, le texte prend la largeur */
+.about .row > .col-lg-4 { display: none; }
+.about .row > .col-lg-8 { flex: 0 0 100%; max-width: 100%; }
+.about .content h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 900; text-transform: uppercase; letter-spacing: -.02em; }
+
+/* Pied de page : l'adresse garde sa casse */
+.footer-mail .btn-cv { text-transform: none !important; }
+
+/* La légende garde un fond plein quand l'image remplit la carte */
+.portfolio .portfolio-content .portfolio-info { background: #f0f0f7 !important; }

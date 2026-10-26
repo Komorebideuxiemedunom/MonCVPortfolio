@@ -50,11 +50,7 @@
   }
   </script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+  
   <!-- Vendor CSS Files -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -64,14 +60,26 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <!-- Habillage néon du site -->
   <link href="assets/css/neo-overrides.css?v=20261026a" rel="stylesheet">
+  <link href="assets/css/signal.css?v=20261026b" rel="stylesheet">
 
   <!-- Theme fixe: mode sombre (DA neonikala) -->
 </head>
 
 <body class="index-page">
 
+  <div class="topbar">
+    <a href="index.html" class="topbar-logo" aria-label="Lucas Dansac, accueil"><span>Dansac</span><span>Lucas</span></a>
+    <div class="topbar-actions">
+      <div class="lang-switch">
+        <button class="lang-opt active" data-lang="fr">FR</button>
+        <button class="lang-opt" data-lang="en">EN</button>
+      </div>
+      <a href="assets/CV_Lucas_Dansac_blanc.pdf" target="_blank" rel="noopener" class="topbar-cv"><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> CV</a>
+    </div>
+  </div>
+
   <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-controls="navmenu"></i>
+    <i class="header-toggle bi bi-list" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-controls="navmenu"></i>
 
     <div class="profile-img">
       <img src="assets/img/my-profile-img-700.jpg" alt="Lucas Dansac" class="img-fluid rounded-circle" width="700" height="711">
@@ -88,7 +96,7 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#about" class="active"><i class="bi bi-person navicon"></i><span data-i18n="nav.about">A propos</span></a></li>
+        <li><a href="#about" class="active"><i class="bi bi-person navicon"></i><span data-i18n="nav.about">À propos</span></a></li>
         <li><a href="#qleap"><i class="bi bi-briefcase navicon"></i><span data-i18n="nav.experience">Expérience</span></a></li>
         <li><a href="#services"><i class="bi bi-grid navicon"></i><span data-i18n="nav.skills">Compétences</span></a></li>
         <li><a href="#resume"><i class="bi bi-signpost-split navicon"></i><span data-i18n="nav.resume">Parcours</span></a></li>
@@ -109,55 +117,39 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <section id="hero" class="hero section">
 
-      <div class="area">
-        <ul class="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+      <div class="container hero-grid">
+        <h1 class="hero-name"><span>Dansac</span><span>Lucas</span></h1>
+        <div class="hero-text">
+          <p class="hero-subtitle" data-i18n="hero.subtitle">Chargé de communication &amp; marketing chez Q-Leap · Luxembourg</p>
+          <div class="hero-cta">
+            <a href="#qleap" class="btn-cv btn-cv-solid"><span data-i18n="hero.cta.work">Voir mon travail</span> <i class="bi bi-arrow-down-short" aria-hidden="true"></i></a>
+            <a href="assets/CV_Lucas_Dansac_blanc.pdf" class="btn-cv" download="CV_Lucas_Dansac.pdf"><i class="bi bi-download" aria-hidden="true"></i> <span data-i18n="hero.cta.cv">Télécharger le CV</span></a>
+          </div>
+          <p class="hero-status"><span class="status-badge-dot"></span><span data-i18n="about.badge">En poste · ouvert aux opportunités</span><span class="hero-status-sep" aria-hidden="true">/</span><span data-i18n="hero.response">Réponds sous 24-48h</span></p>
+        </div>
+        <figure class="hero-photo">
+          <img src="assets/img/my-profile-img-700.jpg" alt="Lucas Dansac" width="700" height="711">
+          <figcaption>Moselle · Luxembourg</figcaption>
+        </figure>
       </div>
-
-      <div class="container">
-        <h1>DANSAC Lucas</h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">Chargé de communication &amp; marketing chez Q-Leap · Luxembourg</p>
-        <div class="hero-flow" aria-label="Communication, Marketing, Coordination de projets, Digital">
-          <span class="flow-word">Communication</span><i class="bi bi-dot flow-arrow" aria-hidden="true"></i>
-          <span class="flow-word">Marketing</span><i class="bi bi-dot flow-arrow" aria-hidden="true"></i>
-          <span class="flow-word" data-i18n="flow.coord">Coordination de projets</span><i class="bi bi-dot flow-arrow" aria-hidden="true"></i>
-          <span class="flow-word flow-word-last">Digital</span>
-        </div>
-        <p class="hero-tagline" data-i18n="hero.tagline">Je fais avancer des projets à l'intersection du marketing, de la communication et du digital : je les cadre, je coordonne les gens autour, et je produis moi-même une partie des livrables.</p>
-        <div class="hero-cta">
-          <a href="#qleap" class="btn-cv btn-cv-solid"><span data-i18n="hero.cta.work">Voir mon travail</span> <i class="bi bi-arrow-down-short" aria-hidden="true"></i></a>
-          <a href="assets/CV_Lucas_Dansac_blanc.pdf" class="btn-cv" download="CV_Lucas_Dansac.pdf"><i class="bi bi-download" aria-hidden="true"></i> <span data-i18n="hero.cta.cv">Télécharger le CV</span></a>
-        </div>
-        <p class="hero-contact"><a href="#contact" data-i18n="hero.cta.contact">ou me contacter directement</a></p>
-        <div class="hero-badges">
-          <span class="status-badge">
-            <span class="status-badge-dot"></span>
-            <span data-i18n="about.badge">En poste · ouvert aux opportunités</span>
-          </span>
-          <span class="status-badge status-badge-secondary">
-            <i class="bi bi-clock-history"></i>
-            <span data-i18n="hero.response">Réponds sous 24-48h</span>
-          </span>
-        </div>
-      </div>
-
-      <a href="#about" class="scroll-down-hint" aria-label="Défiler vers la section À propos">
-        <i class="bi bi-chevron-down"></i>
-      </a>
 
     </section><!-- /Hero Section -->
+
+    <!-- Manifeste : se lit au fil du scroll -->
+    <section id="manifeste" class="manifesto section">
+      <div class="container">
+        <p class="manifesto-text">
+          <span data-i18n="mf.1">Je fais avancer des</span>
+          <span class="hl" data-i18n="mf.2">projets</span>
+          <span data-i18n="mf.3">entre communication, marketing et digital.</span>
+          <span data-i18n="mf.4">Je cadre, je coordonne les gens, et je produis</span>
+          <span class="hl" data-i18n="mf.5">moi-même</span>
+          <span data-i18n="mf.6">une partie des livrables.</span>
+        </p>
+      </div>
+    </section><!-- /Manifeste -->
 
     <!-- Trust Bar Section -->
     <section id="trust" class="trust-bar section">
@@ -188,7 +180,7 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2 data-i18n="about.title">A Propos</h2>
+        <h2 data-i18n="about.title">À propos</h2>
         <p data-i18n="about.subtitle">Master en management de la création numérique · Plus de 4 ans à coordonner des projets, à communiquer et à produire les livrables.</p>
       </div><!-- End Section Title -->
 
@@ -1082,11 +1074,35 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© 2026 <strong class="px-1 sitename">Lucas Dansac</strong> · <a href="mailto:lucas.dansac@gmail.com">lucas.dansac@gmail.com</a> · <a href="https://www.linkedin.com/in/lucas-dansac/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://github.com/Komorebideuxiemedunom" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  <footer id="footer" class="footer">
+    <div class="footer-card">
+      <p class="footer-statement"><span data-i18n="ft.s1">Un projet à faire</span> <span class="hl" data-i18n="ft.s2">avancer ?</span></p>
+      <div class="footer-cols">
+        <div>
+          <span class="footer-label" data-i18n="ft.pages">Pages</span>
+          <ul>
+            <li><a href="index.html#about" data-i18n="nav.about">À propos</a></li>
+            <li><a href="index.html#qleap" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="index.html#resume" data-i18n="nav.resume">Parcours</a></li>
+            <li><a href="index.html#portfolio" data-i18n="nav.projects">Projets perso</a></li>
+          </ul>
+        </div>
+        <div class="footer-mail">
+          <a href="mailto:lucas.dansac@gmail.com" class="btn-cv btn-cv-solid">lucas.dansac@gmail.com</a>
+        </div>
+        <div>
+          <span class="footer-label" data-i18n="ft.follow">Ailleurs</span>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/lucas-dansac/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/Komorebideuxiemedunom" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="assets/CV_Lucas_Dansac_blanc.pdf" target="_blank" rel="noopener" data-i18n="nav.cv">CV (PDF)</a></li>
+          </ul>
+        </div>
       </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lucas Dansac</span>
+      <span data-i18n="ft.place">Moselle · Luxembourg</span>
     </div>
   </footer>
 
