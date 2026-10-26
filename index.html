@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr" data-theme="dark">
 
 <head>
@@ -51,21 +51,24 @@
   </script>
 
   <!-- Fonts -->
-  <link rel="preload" href="assets/fonts/gloock.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
   <!-- Vendor CSS Files -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/site.css?v=20261025" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Habillage néon du site -->
+  <link href="assets/css/neo-overrides.css?v=20261026a" rel="stylesheet">
 
   <!-- Theme fixe: mode sombre (DA neonikala) -->
 </head>
 
 <body class="index-page">
-
-  <!-- Neo cursor elements -->
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-controls="navmenu"></i>
@@ -108,8 +111,23 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
       <div class="container">
-        <h1 >DANSAC Lucas</h1>
+        <h1>DANSAC Lucas</h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle">Chargé de communication &amp; marketing chez Q-Leap · Luxembourg</p>
         <div class="hero-flow" aria-label="Communication, Marketing, Coordination de projets, Digital">
           <span class="flow-word">Communication</span><i class="bi bi-dot flow-arrow" aria-hidden="true"></i>
@@ -170,8 +188,8 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2  data-i18n="about.title">A Propos</h2>
-        <p  data-i18n="about.subtitle">Master en management de la création numérique · Plus de 4 ans à coordonner des projets, à communiquer et à produire les livrables.</p>
+        <h2 data-i18n="about.title">A Propos</h2>
+        <p data-i18n="about.subtitle">Master en management de la création numérique · Plus de 4 ans à coordonner des projets, à communiquer et à produire les livrables.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -182,7 +200,7 @@
           </div>
           <div class="col-lg-8 content">
             <h2 data-i18n="about.h2">Coordinateur, créatif et communicant</h2>
-            <p class="fst-italic py-3" data-i18n="about.body1">
+            <p class="about-lead py-3" data-i18n="about.body1">
               Diplômé d'un master en management de la création numérique, j'ai d'abord piloté des projets de jeux vidéo avec des équipes de 3 à 12 personnes. Chez Q-Leap, j'applique la même logique à la communication et au marketing : un objectif clair, un plan, des personnes à coordonner, et des livrables que je produis souvent moi-même.
             </p>
             <p class="about-throughline" data-i18n="about.throughline">
@@ -223,18 +241,18 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2  data-i18n="qleap.title">Expérience</h2>
-        <p  data-i18n="qleap.subtitle">Q-Leap, depuis juin 2026. C'est là que tout ce que je sais faire se retrouve dans un même poste.</p>
+        <h2 data-i18n="qleap.title">Expérience</h2>
+        <p data-i18n="qleap.subtitle">Q-Leap, depuis juin 2026. C'est là que tout ce que je sais faire se retrouve dans un même poste.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="qleap-intro">
+          <h3 class="qleap-heading">Q-Leap · Communication, Marketing &amp; Project Coordination</h3>
           <div class="qleap-intro-meta">
             <span class="service-tag">Q-Leap S.A · Luxembourg</span>
             <span class="qleap-status"><span class="status-badge-dot"></span><span data-i18n="qleap.status">En cours · 2026</span></span>
           </div>
-          <h3 class="qleap-heading">Q-Leap · Communication, Marketing &amp; Project Coordination</h3>
           <p class="qleap-lead" data-i18n="qleap.intro1">Je travaille entre communication, marketing, événementiel et outils digitaux, de la stratégie et du planning jusqu'à la production et au suivi.</p>
           <p class="qleap-lead" data-i18n="qleap.intro2">Mon rôle consiste à transformer des besoins parfois très différents en actions concrètes.</p>
           <div class="qleap-pm">
@@ -261,10 +279,10 @@
 
         <article class="case">
           <header class="case-head">
-            <span class="qleap-project-status" data-i18n="qleap.inprogress">En cours · 2026</span>
             <h4>LSTE 2026</h4>
             <p class="qleap-project-role">Event Marketing &amp; Project Coordination</p>
             <p class="case-meta">Luxembourg Software Testing Event</p>
+            <span class="qleap-project-status" data-i18n="qleap.inprogress">En cours · 2026</span>
           </header>
           <dl class="case-steps">
             <div><dt data-i18n="case.context">Contexte</dt><dd>L'édition 2026 du Luxembourg Software Testing Event, avec ses sponsors, ses speakers et ses workshops.</dd></div>
@@ -286,10 +304,10 @@
 
         <article class="case">
           <header class="case-head">
-            <span class="qleap-project-status" data-i18n="qleap.inprogress">En cours · 2026</span>
             <h4>Q-Guard</h4>
             <p class="qleap-project-role">Product Marketing &amp; Positioning</p>
             <p class="case-meta" data-i18n="case.qleap.product">Produit Q-Leap</p>
+            <span class="qleap-project-status" data-i18n="qleap.inprogress">En cours · 2026</span>
           </header>
           <dl class="case-steps">
             <div><dt data-i18n="case.context">Contexte</dt><dd>Un des produits de Q-Leap, avec des formations autour.</dd></div>
@@ -311,10 +329,10 @@
 
         <article class="case">
           <header class="case-head">
-            <span class="qleap-project-status" data-i18n="qleap.inprogress">En cours · 2026</span>
             <h4>Q-Bot</h4>
             <p class="qleap-project-role">Product Communication</p>
             <p class="case-meta" data-i18n="case.qleap.product">Produit Q-Leap</p>
+            <span class="qleap-project-status" data-i18n="qleap.inprogress">En cours · 2026</span>
           </header>
           <dl class="case-steps">
             <div><dt data-i18n="case.context">Contexte</dt><dd>Un autre produit de Q-Leap, lui aussi accompagné de formations.</dd></div>
@@ -384,8 +402,8 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2  data-i18n="services.title">Ce que j'apporte</h2>
-        <p  data-i18n="services.subtitle">Pas une liste de logiciels : les problèmes que je sais résoudre sur un projet.</p>
+        <h2 data-i18n="services.title">Ce que j'apporte</h2>
+        <p data-i18n="services.subtitle">Pas une liste de logiciels : les problèmes que je sais résoudre sur un projet.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -394,9 +412,8 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-diagram-3" aria-hidden="true"></i></div>
+              <span class="service-num" aria-hidden="true">01</span>
               <div>
-                <span class="service-tag" data-i18n="services.tag.project">Projet</span>
                 <h3 class="title" data-i18n="services.pm.title">Faire avancer un projet</h3>
                 <p class="description" data-i18n="services.pm.desc">Cadrer un projet, organiser les parties prenantes, planifier les livrables et suivre l'exécution.</p>
                 <p class="service-proof"><span data-i18n="services.proof">Où je l'ai fait</span> <span data-i18n="services.pm.proof">Projets événementiels chez Q-Leap · 5 projets de jeu, dont 4 en chef de projet, avec des équipes de 3 à 12 personnes</span></p>
@@ -406,9 +423,8 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-megaphone" aria-hidden="true"></i></div>
+              <span class="service-num" aria-hidden="true">02</span>
               <div>
-                <span class="service-tag">Communication</span>
                 <h3 class="title" data-i18n="services.com.title">Faire passer un message</h3>
                 <p class="description" data-i18n="services.com.desc">Transformer une information en contenu adapté à une audience et à un canal.</p>
                 <p class="service-proof"><span data-i18n="services.proof">Où je l'ai fait</span> <span data-i18n="services.com.proof">Plan de communication LSTE 2026 · 2 pages LinkedIn Q-Leap</span></p>
@@ -418,9 +434,8 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-bullseye" aria-hidden="true"></i></div>
+              <span class="service-num" aria-hidden="true">03</span>
               <div>
-                <span class="service-tag">Marketing</span>
                 <h3 class="title" data-i18n="services.mk.title">Toucher la bonne cible</h3>
                 <p class="description" data-i18n="services.mk.desc">Définir une cible, structurer une campagne, travailler le positionnement et suivre les KPI.</p>
                 <p class="service-proof"><span data-i18n="services.proof">Où je l'ai fait</span> <span data-i18n="services.mk.proof">Personas et analyse SEO pour Q-Guard · suivi des inscriptions LSTE</span></p>
@@ -430,9 +445,8 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-palette" aria-hidden="true"></i></div>
+              <span class="service-num" aria-hidden="true">04</span>
               <div>
-                <span class="service-tag" data-i18n="services.tag.production">Production</span>
                 <h3 class="title" data-i18n="services.prod.title">Produire les livrables moi-même</h3>
                 <p class="description" data-i18n="services.prod.desc">Créer directement les assets nécessaires : visuels, vidéos, contenus, supports de communication.</p>
                 <p class="service-proof"><span data-i18n="services.proof">Où je l'ai fait</span> <span data-i18n="services.prod.proof">Visuels, infographies et vidéos Q-Leap · VFX et 3D sur mes projets de jeu</span></p>
@@ -442,9 +456,8 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-code-slash" aria-hidden="true"></i></div>
+              <span class="service-num" aria-hidden="true">05</span>
               <div>
-                <span class="service-tag">Digital</span>
                 <h3 class="title" data-i18n="services.web.title">Faire tourner les outils</h3>
                 <p class="description" data-i18n="services.web.desc">Utiliser et connecter les outils, sites et workflows nécessaires pour faire fonctionner les projets.</p>
                 <p class="service-proof"><span data-i18n="services.proof">Où je l'ai fait</span> <span data-i18n="services.web.proof">Migration et refonte de 4 sites web Q-Leap · consolidation des contacts Odoo et Boond</span></p>
@@ -463,8 +476,8 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2  data-i18n="skills.title">Compétences</h2>
-        <p  data-i18n="skills.subtitle">Ce que je sais faire, puis les outils avec lesquels je le fais. Mes expériences au-dessus servent de preuve.</p>
+        <h2 data-i18n="skills.title">Compétences</h2>
+        <p data-i18n="skills.subtitle">Ce que je sais faire, puis les outils avec lesquels je le fais. Mes expériences au-dessus servent de preuve.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -519,8 +532,8 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2  data-i18n="resume.title">Parcours</h2>
-        <p  data-i18n="resume.subtitle">Formation, expériences et projets, dans l'ordre où ils ont construit mon profil.</p>
+        <h2 data-i18n="resume.title">Parcours</h2>
+        <p data-i18n="resume.subtitle">Formation, expériences et projets, dans l'ordre où ils ont construit mon profil.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -726,8 +739,8 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2  data-i18n="testimonials.title">Ce qu'on dit de moi</h2>
-        <p  data-i18n="testimonials.subtitle">Deux personnes avec qui j'ai travaillé, en stage et en production.</p>
+        <h2 data-i18n="testimonials.title">Ce qu'on dit de moi</h2>
+        <p data-i18n="testimonials.subtitle">Deux personnes avec qui j'ai travaillé, en stage et en production.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -765,8 +778,8 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2  data-i18n="portfolio.title">Projets personnels &amp; créatifs</h2>
-        <p  data-i18n="portfolio.subtitle">Apps, jeux, game jams et design, en études et sur mon temps libre. C'est là que j'expérimente, et là que j'ai appris à piloter une équipe.</p>
+        <h2 data-i18n="portfolio.title">Projets personnels &amp; créatifs</h2>
+        <p data-i18n="portfolio.subtitle">Apps, jeux, game jams et design, en études et sur mon temps libre. C'est là que j'expérimente, et là que j'ai appris à piloter une équipe.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -948,49 +961,30 @@
 
 
     <!-- Passions Section -->
-    <section id="passions" class="services section passions-section light-background">
+    <section id="passions" class="section passions-section light-background">
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2  data-i18n="passions.title">Passions</h2>
-        <p  data-i18n="passions.subtitle">Ce qui me passionne en dehors du travail.</p>
+        <h2 data-i18n="passions.title">Passions</h2>
+        <p data-i18n="passions.subtitle">Ce qui me passionne en dehors du travail.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-controller"></i></div>
-              <div>
-                <h4 class="title" data-i18n="passions.games.title">Jeux vidéos</h4>
-                <p class="description">Chef d'une guilde de 34 personnes sur World of Warcraft pendant 3 ans. Top 3 mondial monk tank (2023). Top 0.2% joueurs européens sur Valorant. Top 3% joueurs européens sur CS2.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-tv"></i></div>
-              <div>
-                <h4 class="title" data-i18n="passions.series.title">Séries et films</h4>
-                <p class="description">Amateur d'animation 2D/3D : plus de 500 séries terminées.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-book"></i></div>
-              <div>
-                <h4 class="title" data-i18n="passions.read.title">Lecture</h4>
-                <p class="description">Philosophie (Hermann Hesse), romans dystopiques et psychologiques, manga et manhwa.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-        </div>
+        <ul class="passions-list">
+          <li>
+            <h3 data-i18n="passions.games.title">Jeux vidéos</h3>
+            <p>Chef d'une guilde de 34 personnes sur World of Warcraft pendant 3 ans. Top 3 mondial monk tank (2023). Top 0.2% joueurs européens sur Valorant. Top 3% joueurs européens sur CS2.</p>
+          </li>
+          <li>
+            <h3 data-i18n="passions.series.title">Séries et films</h3>
+            <p>Amateur d'animation 2D/3D : plus de 500 séries terminées.</p>
+          </li>
+          <li>
+            <h3 data-i18n="passions.read.title">Lecture</h3>
+            <p>Philosophie (Hermann Hesse), romans dystopiques et psychologiques, manga et manhwa.</p>
+          </li>
+        </ul>
 
       </div>
 
@@ -1002,8 +996,8 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2  data-i18n="contact.title">Me contacter</h2>
-        <p  data-i18n="contact.subtitle">Le plus rapide : un e-mail ou un message LinkedIn. Je réponds sous 24 à 48 h.</p>
+        <h2 data-i18n="contact.title">Me contacter</h2>
+        <p data-i18n="contact.subtitle">Le plus rapide : un e-mail ou un message LinkedIn. Je réponds sous 24 à 48 h.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -1112,6 +1106,8 @@
   <script src="assets/js/i18n.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Barre de lecture et formulaire de contact -->
+  <script src="assets/js/neo-effects.js"></script>
 
 </body>
 
