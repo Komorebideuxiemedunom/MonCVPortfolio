@@ -7,23 +7,72 @@
   var prefersReduced = function () { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; };
 
   /* ====================================================
-     0. MANIFESTE : chaque morceau s'allume à mesure qu'on lit
+     0. RÉCIT AU SCROLL : le parcours se dessine, les chiffres
+        montent, la façon de travailler se déroule étape par étape.
+        Rien de tout ça si le visiteur demande moins d'animations.
   ==================================================== */
-  function initManifesto() {
-    var box = document.querySelector('.manifesto-text');
-    if (!box || prefersReduced()) return;
-    var parts = box.querySelectorAll('span');
-    box.classList.add('is-armed');
+  function clamp01(v) { return Math.max(0, Math.min(1, v)); }
+
+  function initStory() {
+    if (prefersReduced()) return;
+    document.documentElement.classList.add('story');
+
+    var items = document.querySelectorAll('.resume .resume-item');
+    var path = document.querySelector('.career-path');
+    var steps = path ? path.querySelectorAll('li') : [];
+    var how = document.querySelector('.qleap-how');
+    var words = how ? how.querySelectorAll('.flow-word') : [];
+
     function update() {
-      var r = box.getBoundingClientRect();
       var vh = window.innerHeight;
-      var prog = (vh * 0.8 - r.top) / (r.height + vh * 0.3);
-      var lit = Math.round(Math.max(0, Math.min(1, prog)) * parts.length);
-      parts.forEach(function (p, i) { p.classList.toggle('is-lit', i < lit); });
+      // Frise du CV : le trait descend avec la lecture, chaque poste s'allume quand il l'atteint
+      items.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        var fill = clamp01((vh * 0.7 - r.top) / Math.max(r.height, 1));
+        el.style.setProperty('--fill', (fill * 100).toFixed(1) + '%');
+        el.classList.toggle('is-reached', fill > 0);
+      });
+      // Parcours en quatre temps : les étapes s'allument l'une après l'autre
+      if (path) {
+        var r = path.getBoundingClientRect();
+        var n = Math.round(clamp01((vh * 0.85 - r.top) / (vh * 0.5)) * steps.length);
+        steps.forEach(function (li, i) { li.classList.toggle('is-reached', i < n); });
+      }
+      // Façon de travailler : épinglée, une étape par portion de scroll
+      if (how) {
+        var h = how.getBoundingClientRect();
+        var prog = clamp01(-h.top / Math.max(h.height - vh, 1));
+        var active = Math.min(words.length - 1, Math.floor(prog * words.length));
+        words.forEach(function (w, i) {
+          w.classList.toggle('is-done', i < active);
+          w.classList.toggle('is-active', i === active);
+        });
+        how.style.setProperty('--how', prog.toFixed(3));
+      }
     }
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
     update();
+
+    // Chiffres : ils montent jusqu'à leur valeur la première fois qu'on les voit
+    var counters = document.querySelectorAll('.qleap-stats strong');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        var m = e.target.textContent.match(/^(\d+)(.*)$/);
+        if (!m) return;
+        var end = parseInt(m[1], 10), rest = m[2], t0 = null;
+        function tick(t) {
+          if (!t0) t0 = t;
+          var k = clamp01((t - t0) / 1100);
+          e.target.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))) + rest;
+          if (k < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (c) { io.observe(c); });
   }
 
   /* ====================================================
@@ -132,7 +181,7 @@
      INIT
   ==================================================== */
   function init() {
-    initManifesto();
+    initStory();
     initReadingProgress();
     initContactForm();
   }

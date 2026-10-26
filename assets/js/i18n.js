@@ -3,17 +3,6 @@
 
   var translations = {
     fr: {
-      'mf.1': "Je fais avancer des",
-      'mf.2': "projets",
-      'mf.3': "entre communication, marketing et digital.",
-      'mf.4': "Je cadre, je coordonne les gens, et je produis",
-      'mf.5': "moi-même",
-      'mf.6': "une partie des livrables.",
-      'ft.s1': "Un projet à faire",
-      'ft.s2': "avancer ?",
-      'ft.pages': "Pages",
-      'ft.follow': "Ailleurs",
-      'ft.place': "Moselle · Luxembourg",
       'nav.about': "À propos",
       'nav.resume': "Parcours",
       'nav.portfolio': "Projets perso",
@@ -353,17 +342,6 @@
       // --- fin pages projet jeux ---
     },
     en: {
-      'mf.1': "I move",
-      'mf.2': "projects",
-      'mf.3': "forward across communication, marketing and digital.",
-      'mf.4': "I scope them, I bring people together, and I make",
-      'mf.5': "part of the deliverables",
-      'mf.6': "myself.",
-      'ft.s1': "A project that needs",
-      'ft.s2': "moving?",
-      'ft.pages': "Pages",
-      'ft.follow': "Elsewhere",
-      'ft.place': "Moselle · Luxembourg",
       'nav.about': "About",
       'nav.resume': "Background",
       'nav.portfolio': "Side projects",
