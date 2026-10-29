@@ -13,13 +13,33 @@
    * Header toggle
    */
   const headerToggleBtn = document.querySelector('.header-toggle');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const scrollBehavior = () => (reducedMotion.matches ? 'auto' : 'smooth');
+  const mobileNav = window.matchMedia('(max-width: 1199.98px)');
+
+  // Menu mobile fermé : hors écran, ses liens ne doivent pas rester atteignables au clavier.
+  function syncHeaderInert() {
+    var header = document.querySelector('#header');
+    var hidden = mobileNav.matches && !header.classList.contains('header-show');
+    Array.prototype.forEach.call(header.children, function(child) {
+      if (child !== headerToggleBtn) child.inert = hidden;
+    });
+  }
 
   function headerToggle() {
     var open = document.querySelector('#header').classList.toggle('header-show');
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
     headerToggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    headerToggleBtn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    syncHeaderInert();
+    if (open) {
+      var first = document.querySelector('#navmenu a');
+      if (first) first.focus();
+    }
   }
+  syncHeaderInert();
+  mobileNav.addEventListener('change', syncHeaderInert);
   headerToggleBtn.addEventListener('click', headerToggle);
   headerToggleBtn.addEventListener('keydown', function(e) {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); headerToggle(); }
@@ -72,7 +92,7 @@
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: scrollBehavior()
     });
   });
 
@@ -116,19 +136,31 @@
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
+        // Un filtre choisi avant la fin du chargement des images est appliqué ici.
         filter: filter,
         sortBy: sort
       });
     });
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
+      // Filtres utilisables au clavier et annoncés comme des boutons à bascule.
+      filters.setAttribute('role', 'button');
+      filters.setAttribute('tabindex', '0');
+      filters.setAttribute('aria-pressed', filters.classList.contains('filter-active') ? 'true' : 'false');
+      function choose() {
+        isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(other) {
+          other.classList.remove('filter-active');
+          other.setAttribute('aria-pressed', 'false');
         });
-      }, false);
+        filters.classList.add('filter-active');
+        filters.setAttribute('aria-pressed', 'true');
+        filter = filters.getAttribute('data-filter');
+        if (initIsotope) initIsotope.arrange({ filter: filter });
+      }
+      filters.addEventListener('click', choose, false);
+      filters.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(); }
+      });
     });
   });
 
@@ -140,6 +172,11 @@
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
+      // « Réduire les animations » : pas de défilement automatique ni de transition.
+      if (reducedMotion.matches) {
+        delete config.autoplay;
+        config.speed = 0;
+      }
 
       if (swiperElement.classList.contains("swiper-tab")) {
         initSwiperWithCustomPagination(swiperElement, config);
@@ -170,7 +207,7 @@
           let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
           window.scrollTo({
             top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
+            behavior: scrollBehavior()
           });
         }, 100);
       }

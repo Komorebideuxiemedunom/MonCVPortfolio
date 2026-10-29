@@ -1791,7 +1791,8 @@ footer {
 
 /* Parcours en quatre temps : chaque étape s'allume à son tour */
 .story .career-path li { transition: border-color .4s, opacity .4s; }
-.story .career-path li:not(.is-reached) { border-color: rgba(88,180,255,.12); opacity: .4; }
+/* Étapes pas encore atteintes : seules les bordures s'éteignent, le texte reste lisible (contraste AA). */
+.story .career-path li:not(.is-reached) { border-color: rgba(88,180,255,.12); opacity: .75; }
 .story .career-path li.is-reached { border-top-color: var(--neo-blue); }
 @media (max-width: 767px) {
   .story .career-path li.is-reached { border-left-color: var(--neo-blue); }
@@ -1832,3 +1833,9 @@ footer {
   text-shadow: 0 0 2px rgba(88,180,255,.5), 0 0 30px rgba(88,180,255,.45);
 }
 .story .qleap-how-text { max-width: 560px; }
+
+/* « Réduire les animations » : prioritaire sur les animations déclarées plus haut avec !important */
+@media (prefers-reduced-motion: reduce) {
+  .resume .resume-item::before { animation: none !important; }
+  html { scroll-behavior: auto !important; }
+}
